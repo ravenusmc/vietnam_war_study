@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-};
+  name: 'Header',
+}
 </script>
 
-<style scoped>
+<style>
 </style>
