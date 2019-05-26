@@ -1,6 +1,10 @@
 <template>
   <div>
-    <img src='@/assets/img/rice_fields.jpg'>
+
+    <header>
+      <img src='@/assets/img/rice_fields.jpg'>
+    </header>
+
   </div>
 </template>
 
@@ -11,4 +15,14 @@ export default {
 </script>
 
 <style>
+header {
+  border: 2px solid red;
+}
+
+img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 </style>
