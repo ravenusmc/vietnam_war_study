@@ -1,6 +1,12 @@
 <template>
   <div>
 
+    <router-view/>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+
     <!-- Header area -->
     <div class='about_header'>
       <h1 class='center'>About Me</h1>
