@@ -1,6 +1,9 @@
 # Vietnam_war_study
 ## Intro
 
+The goal of this project is to analyze Vietnam data - specifically looking at deaths.
+I've thought about this project for a while and thought a little bit about what it will
+encompass and I have to admit that's still a work in progress. 
 
 # Getting started
 ### Installing
