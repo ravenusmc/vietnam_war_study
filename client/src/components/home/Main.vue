@@ -4,18 +4,18 @@
     <router-view/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
+      <router-link to="/deaths">Examining Deaths</router-link> |
       <router-link to="/about">About</router-link>
     </div>
 
     <section class='title_section'>
 
       <h2>Vietnam Study</h2>
-      <hr>
       <p>
         The Vietnam War was a great tragedy for our country. And it is now far
         enough away so that one can study without using the slogans to what's
         really happened.
-        -Henry Kissinger
+        <b>-Henry Kissinger</b>
       </p>
       <hr>
 
@@ -30,6 +30,9 @@
           step in learning about Vietnam.
         </p>
       </div>
+      <hr>
+
+
     </section>
 
   </div>
