@@ -1,13 +1,37 @@
 <template>
   <div>
+
     <router-view/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+
     <section class='title_section'>
-      <h1>Vietnam Study</h1>
+
+      <h2>Vietnam Study</h2>
+      <hr>
+      <p>
+        The Vietnam War was a great tragedy for our country. And it is now far
+        enough away so that one can study without using the slogans to what's
+        really happened.
+        -Henry Kissinger
+      </p>
+      <hr>
+
+      <div>
+        <h2>Purpose</h2>
+        <p>
+          The purpose of this project is to examine data about the Vietnam War.
+          Most of my life I've been very interested in Vietnam - it could have
+          been because my father as a Vietnam Veteran. To me, the war holds so many
+          lessons that really need to be drilled into not only politicians but the
+          general public as well. In many ways, this project is me taking the next
+          step in learning about Vietnam.
+        </p>
+      </div>
     </section>
+
   </div>
 </template>
 
@@ -20,7 +44,17 @@ export default {
 <style scoped>
 
 .title_section {
-  margin-top: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: Benton Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+hr {
+  width: 10%;
+  border-color: red;
 }
 
 </style>
