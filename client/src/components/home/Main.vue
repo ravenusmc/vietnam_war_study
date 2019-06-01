@@ -33,6 +33,11 @@
       <hr>
 
       <div>
+        <h2>Sections</h2>
+      </div>
+      <hr>
+
+      <div>
         <img src='@/assets/img/gif_one.gif'>
       </div>
 
