@@ -32,6 +32,9 @@
       </div>
       <hr>
 
+      <div>
+        <img src='@/assets/img/gif_one.gif'>
+      </div>
 
     </section>
 
