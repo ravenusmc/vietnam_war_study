@@ -1,6 +1,13 @@
 <template>
   <div>
 
+    <header>
+      <h1>Examining Deaths</h1>
+      <p>
+        The goal here is to see how deaths change through out a given time period.
+      </p>
+    </header>
+
     <section>
 
       <form @submit="submitYears">

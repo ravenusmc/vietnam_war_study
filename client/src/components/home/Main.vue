@@ -60,6 +60,7 @@ export default {
   margin-top: 15px;
   font-size: 2rem;
   font-weight: 100;
+  line-height: normal;
   font-family: Benton Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
