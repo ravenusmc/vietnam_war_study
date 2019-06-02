@@ -14,11 +14,17 @@
 
 <script>
 import Form from '@/components/deaths/Form.vue';
+import { eventBus } from '../main';
 
 export default {
   components: {
     Form,
-  }
+  },
+  created() {
+    eventBus.$on('dateData', (queryData) =>  {
+      console.log(queryData)
+    })
+  },
 }
 </script>
 

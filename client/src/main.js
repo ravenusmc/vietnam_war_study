@@ -10,6 +10,9 @@ Vue.config.productionTip = false;
 //Material design
 Vue.use(VueMaterial)
 
+//Vue bus
+export const eventBus = new Vue()
+
 new Vue({
   router,
   store,

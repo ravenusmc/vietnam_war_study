@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { eventBus } from '../../main';
+
 export default {
   name: 'name',
   data() {
@@ -25,7 +27,11 @@ export default {
   methods: {
     submitYears(evt) {
       evt.preventDefault();
-      alert('Mike')
+      const queryData = {
+        yearOne: this.yearOne,
+        yearTwo: this.yearTwo,
+      };
+      eventBus.$emit('dateData', queryData);
     }
   }
 }
