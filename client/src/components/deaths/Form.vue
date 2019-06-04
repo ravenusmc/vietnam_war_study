@@ -69,4 +69,17 @@ form {
 .button_div {
   margin-top: 10px;
 }
+
+button {
+  background-color: #F90303;
+  border-color: #F90303;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+button:hover {
+  color: #F90303;
+  border-color: #EEF903;
+  background-color: #EEF903;
+}
 </style>
