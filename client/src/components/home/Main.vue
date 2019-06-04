@@ -37,7 +37,7 @@
       </div>
       <hr>
 
-      <div>
+      <div class='gif_div'>
         <img src='@/assets/img/gif_one.gif'>
       </div>
 
@@ -68,5 +68,6 @@ hr {
   width: 10%;
   border-color: red;
 }
+
 
 </style>

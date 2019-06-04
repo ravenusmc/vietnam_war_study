@@ -14,7 +14,7 @@ Vue.use(VueMaterial)
 Vue.use(Chart);
 
 //Vue bus
-export const eventBus = new Vue()
+export const eventBus = new Vue();
 
 new Vue({
   router,
