@@ -15,14 +15,21 @@
 <script>
 import Form from '@/components/deaths/Form.vue';
 import { eventBus } from '../main';
+import { mapActions } from 'vuex';
 
 export default {
   components: {
     Form,
   },
+  methods: {
+  ...mapActions([
+      'fetchGraphOneData',
+    ]),
+  },
   created() {
     eventBus.$on('dateData', (queryData) =>  {
       console.log(queryData)
+      this.fetchGraphOneData(queryData)
     })
   },
 }

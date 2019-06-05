@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 #importing code that I wrote
-from data import *
+# from data import *
 
 # configuration
 DEBUG = True
@@ -15,15 +15,16 @@ app.config.from_object(__name__)
 CORS(app)
 
 # sanity check route
-@app.route('/colorChart', methods=['GET', 'POST'])
-def colorChart():
+@app.route('/graphOne', methods=['GET', 'POST'])
+def graphOne():
     if request.method == 'POST':
-        data = Data()
+        # data = Data()
         post_data = request.get_json()
-        yearOne = int(post_data['yearOne'])
-        yearTwo = int(post_data['yearTwo'])
-        data_set_length = data.buildColorChart(yearOne, yearTwo)
-        return jsonify(data_set_length)
+        print(post_data)
+        # yearOne = int(post_data['yearOne'])
+        # yearTwo = int(post_data['yearTwo'])
+        print('MIke')
+        return jsonify('pong')
 
 
 if __name__ == '__main__':
