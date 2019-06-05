@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 #importing code that I wrote
-# from data import *
+from data import *
 
 # configuration
 DEBUG = True
@@ -18,12 +18,10 @@ CORS(app)
 @app.route('/graphOne', methods=['GET', 'POST'])
 def graphOne():
     if request.method == 'POST':
-        # data = Data()
+        data = Data()
         post_data = request.get_json()
-        print(post_data)
-        # yearOne = int(post_data['yearOne'])
-        # yearTwo = int(post_data['yearTwo'])
-        print('MIke')
+        yearOne = int(post_data['yearOne'])
+        yearTwo = int(post_data['yearTwo'])
         return jsonify('pong')
 
 
