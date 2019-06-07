@@ -15,7 +15,7 @@ app.config.from_object(__name__)
 CORS(app)
 
 # sanity check route
-@app.route('/graphOne', methods=['GET', 'POST'])
+@app.route('/one', methods=['GET', 'POST'])
 def graphOne():
     if request.method == 'POST':
         data = Data()

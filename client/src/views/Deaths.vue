@@ -23,13 +23,14 @@ export default {
   },
   methods: {
   ...mapActions([
-      'fetchGraphOneData',
+      'fireActions',
+      'fetchDeathData',
     ]),
   },
   created() {
     eventBus.$on('dateData', (queryData) =>  {
-      console.log(queryData)
-      this.fetchGraphOneData(queryData)
+      this.fireActions(queryData)
+      //this.fetchDeathData(queryData)
     })
   },
 }

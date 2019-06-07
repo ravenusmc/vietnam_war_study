@@ -7,11 +7,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-     graphOneData: {},
+     deathData: {},
   },
 
   getters: {
-    graphOneData: state => state.graphOneData,
+    deathData: state => state.graphOneData,
   },
 
   mutations: {
@@ -19,11 +19,16 @@ export default new Vuex.Store({
   },
 
   actions: {
-    fetchGraphOneData: ({ commit }, payload) => {
-      const path = 'http://localhost:5000/graphOne';
+
+    fireActions: ({ commit, dispatch}, payload) => {
+      dispatch('fetchDeathData', { payload})
+    },
+
+    fetchDeathData: ({ commit }, {payload}) => {
+      const path = 'http://localhost:5000/one';
       axios.post(path, payload)
       .then((res) => {
-        console.log("mike")
+
         // commit('setGraphOneData', res.data);
       })
     }
