@@ -11,6 +11,11 @@ class Data():
 
     def basic_info(self):
         print(self.data.head())
-        
+
+    def get_number_of_death(self, yearOne, yearTwo):
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        print(death_data_set.head())
+        return death_data_set
+
 one = Data()
 one.basic_info()
