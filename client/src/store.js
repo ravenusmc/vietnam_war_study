@@ -6,32 +6,35 @@ import jsonp from 'jsonp';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+
   state: {
-     deathData: {},
+     deathData: 0,
   },
 
   getters: {
-    deathData: state => state.graphOneData,
-  },
-
-  mutations: {
-
+    deathData: state => state.deathData,
   },
 
   actions: {
 
-    fireActions: ({ commit, dispatch}, payload) => {
-      dispatch('fetchDeathData', { payload})
+    fireActions: ({ commit, dispatch }, payload) => {
+      dispatch('fetchDeathData', { payload })
     },
 
     fetchDeathData: ({ commit }, {payload}) => {
       const path = 'http://localhost:5000/one';
       axios.post(path, payload)
       .then((res) => {
-
-        // commit('setGraphOneData', res.data);
+        commit('setDeathData', res.data);
       })
     }
+
+  },
+
+  mutations: {
+    setDeathData(state, data) {
+      state.deathData = data;
+    },
   },
 
 });
