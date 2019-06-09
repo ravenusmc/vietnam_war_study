@@ -13,16 +13,18 @@
     <section id='infoArea'>
 
       <div>
-        <Card :deathData='deathData'></Card>
+        <Card
+          :deathData='deathData'
+          :yearOne='yearOne'
+          :yearTwo='yearTwo'
+          ></Card>
       </div>
 
       <div>
       </div>
-    </section>
 
-    <!-- <p>See Me!</p>
-    <p>{{ getDeaths }}</p>
-    <h1>{{deaths}}</h1> -->
+    </section>
+    
   </div>
 </template>
 
@@ -41,6 +43,8 @@ export default {
   data() {
     return {
       deaths: 0,
+      yearOne: 0,
+      yearTwo: 0,
     }
   },
   computed: {
@@ -60,6 +64,10 @@ export default {
   },
   created() {
     eventBus.$on('dateData', (queryData) =>  {
+      this.yearOne = queryData.yearOne
+      this.yearTwo = queryData.yearTwo
+      console.log(queryData.yearOne)
+
       this.fireActions(queryData)
     })
   },
@@ -67,4 +75,13 @@ export default {
 </script>
 
 <style scoped>
+#infoArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 2px solid red;
+}
+
 </style>

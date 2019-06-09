@@ -1,15 +1,18 @@
 <template>
   <div>
-    <h1>Card One</h1>
-    
-    <p>{{deathData}}</p>
+
+    <div class='card'>
+      <h3>Vietnam Deaths between {{ yearOne }} and {{ yearTwo }}</h3>
+      <p>{{deathData}}</p>
+    </div>
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'Card',
-  props: ['deathData'],
+  props: ['deathData', 'yearOne', 'yearTwo'],
   data() {
     return {
 
@@ -18,5 +21,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.card {
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 12px;
+}
 </style>
