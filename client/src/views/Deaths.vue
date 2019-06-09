@@ -10,14 +10,25 @@
 
     <Form/>
 
-    <p>See Me!</p>
+    <section id='infoArea'>
+
+      <div>
+        <Card :deathData='deathData'></Card>
+      </div>
+
+      <div>
+      </div>
+    </section>
+
+    <!-- <p>See Me!</p>
     <p>{{ getDeaths }}</p>
-    <h1>{{deaths}}</h1>
+    <h1>{{deaths}}</h1> -->
   </div>
 </template>
 
 <script>
 import Form from '@/components/deaths/Form.vue';
+import Card from '@/components/deaths/Card.vue';
 import { eventBus } from '../main';
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
@@ -25,6 +36,7 @@ import { mapGetters } from 'vuex';
 export default {
   components: {
     Form,
+    Card,
   },
   data() {
     return {
