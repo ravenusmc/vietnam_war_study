@@ -1,9 +1,12 @@
 <template>
   <div>
 
-    <div class='card'>
-      <h3>Vietnam Deaths between {{ yearOne }} and {{ yearTwo }}</h3>
-      <p>{{deathData}}</p>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Vietnam Deaths</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ yearOne }} - {{ yearTwo }}</h6>
+        <p class="card-text">{{deathData}}</p>
+      </div>
     </div>
 
   </div>
