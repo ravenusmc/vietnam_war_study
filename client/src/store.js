@@ -9,10 +9,12 @@ export default new Vuex.Store({
 
   state: {
      deathData: 0,
+     graphOneData: {},
   },
 
   getters: {
     deathData: state => state.deathData,
+    graphOneData: state => state.graphOneData,
   },
 
   actions: {
@@ -44,6 +46,9 @@ export default new Vuex.Store({
     setDeathData(state, data) {
       state.deathData = data;
     },
+    setGraphOneData(state, data){
+      state.graphOneData = data;
+    }
   },
 
 });
