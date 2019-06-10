@@ -19,6 +19,7 @@ export default new Vuex.Store({
 
     fireActions: ({ commit, dispatch }, payload) => {
       dispatch('fetchDeathData', { payload })
+      dispatch('fetchGraphOneData', { payload })
     },
 
     fetchDeathData: ({ commit }, {payload}) => {
@@ -27,7 +28,15 @@ export default new Vuex.Store({
       .then((res) => {
         commit('setDeathData', res.data);
       })
-    }
+    },
+
+    fetchGraphOneData: ({commit}, {payload}) => {
+      const path = 'http://localhost:5000/firstGraph';
+      axios.post(path, payload)
+      .then((res) => {
+        console.log('Mike')
+      })
+    },
 
   },
 

@@ -24,7 +24,7 @@
       </div>
 
     </section>
-    
+
   </div>
 </template>
 
@@ -66,8 +66,6 @@ export default {
     eventBus.$on('dateData', (queryData) =>  {
       this.yearOne = queryData.yearOne
       this.yearTwo = queryData.yearTwo
-      console.log(queryData.yearOne)
-
       this.fireActions(queryData)
     })
   },

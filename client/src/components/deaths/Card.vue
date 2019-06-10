@@ -25,9 +25,9 @@ export default {
 </script>
 
 <style scoped>
-.card {
+/* .card {
   border: 2px solid black;
   margin: 10px;
   border-radius: 12px;
-}
+} */
 </style>
