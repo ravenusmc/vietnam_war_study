@@ -21,6 +21,7 @@
       </div>
 
       <div>
+        <GraphOne></GraphOne>
       </div>
 
     </section>
@@ -31,6 +32,7 @@
 <script>
 import Form from '@/components/deaths/Form.vue';
 import Card from '@/components/deaths/Card.vue';
+import GraphOne from '@/components/deaths/GraphOne.vue';
 import { eventBus } from '../main';
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
@@ -39,6 +41,7 @@ export default {
   components: {
     Form,
     Card,
+    GraphOne,
   },
   data() {
     return {
@@ -50,6 +53,7 @@ export default {
   computed: {
     ...mapGetters([
         'deathData',
+        'graphOneData',
     ]),
     getDeaths(){
       console.log(this.deathData)
@@ -59,7 +63,6 @@ export default {
   methods: {
   ...mapActions([
       'fireActions',
-      'fetchDeathData',
     ]),
   },
   created() {
