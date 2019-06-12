@@ -12,10 +12,16 @@ class Data():
     def basic_info(self):
         print(self.data.head())
 
-    def get_number_of_death(self, yearOne, yearTwo):
+    #This method will get the total number of deaths between the two years that that
+    #user enters.
+    def get_total_deaths_between_years(self, yearOne, yearTwo):
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
         number_of_deaths = len(death_data_set)
         return number_of_deaths
+
+    #This method will get the total number of deaths by year
+    def get_number_of_death(self):
+        pass
 
 one = Data()
 one.basic_info()

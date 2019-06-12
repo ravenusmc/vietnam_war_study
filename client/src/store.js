@@ -19,9 +19,11 @@ export default new Vuex.Store({
 
   actions: {
 
+    //This is the main action that will fire that rest of the actions when the
+    //user hits the submit button.
     fireActions: ({ commit, dispatch }, payload) => {
       dispatch('fetchDeathData', { payload })
-      dispatch('fetchGraphOneData', { payload })
+      dispatch('fetchGraphOneData')
     },
 
     fetchDeathData: ({ commit }, {payload}) => {
@@ -32,9 +34,10 @@ export default new Vuex.Store({
       })
     },
 
-    fetchGraphOneData: ({commit}, {payload}) => {
+    fetchGraphOneData: ({commit}) => {
+      console.log('fired')
       const path = 'http://localhost:5000/firstGraph';
-      axios.post(path, payload)
+      axios.post(path)
       .then((res) => {
         console.log('Mike')
       })
