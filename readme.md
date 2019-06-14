@@ -5,15 +5,16 @@ The goal of this project is to analyze Vietnam data - specifically looking at de
 I've thought about this project for a while and thought a little bit about what it will
 encompass and I have to admit that's still a work in progress. The dataset for this
 project may be found at this site: https://www.kaggle.com/orangutan/vietnamconfilct.
-This project may also focus on bombing runs in Vietnam. 
+This project may also focus on bombing runs in Vietnam.
 
 # Getting started
 ### Installing
 
 1. Clone the repo
 2. Run [sudo] pip3 install or pip3 install flask
-3. Run python3 main.py to run the application
-6. Visit localhost:5000 to see the application
+3. Run python3 app.py to run the application
+4. Visit localhost:5000 to see the application
+5. Please note that these instructions only follow the Python side of this application.
 
 ### Technology Stack
 
