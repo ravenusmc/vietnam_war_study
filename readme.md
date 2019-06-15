@@ -16,6 +16,7 @@ This project may also focus on bombing runs in Vietnam.
 4. Visit localhost:5000 to see the application
 5. Please note that these instructions only follow the Python side of this application.
 
+
 ### Technology Stack
 
 1. Flask-0.12
@@ -28,7 +29,8 @@ This project may also focus on bombing runs in Vietnam.
 
 Once the program is downloaded, simply run the program as you would any other python program.
 Then follow the address, which your console/terminal tells you to go to see the
-website.
+website. Again, please do not forget to ensure that you have vue CLI installed
+as well as npm. 
 
 # Issues / Other
 
