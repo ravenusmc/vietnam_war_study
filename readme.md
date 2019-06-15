@@ -3,9 +3,9 @@
 
 The goal of this project is to analyze Vietnam data - specifically looking at deaths.
 I've thought about this project for a while and thought a little bit about what it will
-encompass and I have to admit that's still a work in progress. The dataset for this
-project may be found at this site: https://www.kaggle.com/orangutan/vietnamconfilct.
-This project may also focus on bombing runs in Vietnam.
+encompass and I have to admit that's still a work in progress. The main goal will
+be to allow the user to select two different years and see data about deaths during
+that time frame. The dataset for this project may be found at this site: https://www.kaggle.com/orangutan/vietnamconfilct. This project may also focus on bombing runs in Vietnam.
 
 # Getting started
 ### Installing
@@ -30,7 +30,7 @@ This project may also focus on bombing runs in Vietnam.
 Once the program is downloaded, simply run the program as you would any other python program.
 Then follow the address, which your console/terminal tells you to go to see the
 website. Again, please do not forget to ensure that you have vue CLI installed
-as well as npm. 
+as well as npm.
 
 # Issues / Other
 
