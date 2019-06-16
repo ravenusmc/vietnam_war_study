@@ -5,7 +5,10 @@ The goal of this project is to analyze Vietnam data - specifically looking at de
 I've thought about this project for a while and thought a little bit about what it will
 encompass and I have to admit that's still a work in progress. The main goal will
 be to allow the user to select two different years and see data about deaths during
-that time frame. The dataset for this project may be found at this site: https://www.kaggle.com/orangutan/vietnamconfilct. This project may also focus on bombing runs in Vietnam.
+that time frame. The dataset for this project may be found at this site: https://www.kaggle.com/orangutan/vietnamconfilct.
+
+This project may also focus on bombing runs in Vietnam. This is a possible plan
+for further down the line. 
 
 # Getting started
 ### Installing
