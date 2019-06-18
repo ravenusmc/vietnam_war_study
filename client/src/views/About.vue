@@ -14,6 +14,8 @@
     </div>
     <!-- End of Header Area -->
 
+    <hr>
+
     <!-- Start of content area -->
     <div class='about_content_area'>
 
@@ -60,6 +62,8 @@
     </div>
     <!-- End of content area -->
 
+    <hr>
+
   </div>
 </template>
 
@@ -83,9 +87,10 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
     margin-bottom: 50px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
+
   @media only all and (max-width: 768px) {
     .pic_div {
       display: flex;
