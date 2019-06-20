@@ -96,16 +96,20 @@
   }
 
   @media only all and (max-width: 768px) {
+
+  }
     .pic_div {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
+
     .about_content_area {
       grid-template-columns: 1fr;
       margin-left: 2%;
       margin-right: 2%;
     }
+    
   }
 </style>
