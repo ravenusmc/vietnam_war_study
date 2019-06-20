@@ -71,17 +71,21 @@
 </script>
 
 <style lang="css" scoped>
+
   .center {
     text-align: center;
   }
+
   .about_header {
     margin-top: 50px;
     margin-bottom: 50px;
   }
+
   img {
     border-radius: 10px;
     width: 80%;
   }
+
   .about_content_area {
     display: grid;
     grid-template-columns: 1fr 1fr;
