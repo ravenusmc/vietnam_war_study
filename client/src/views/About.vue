@@ -97,7 +97,6 @@
 
   @media only all and (max-width: 768px) {
 
-  }
     .pic_div {
       display: flex;
       flex-direction: column;
@@ -110,6 +109,6 @@
       margin-left: 2%;
       margin-right: 2%;
     }
-    
+
   }
 </style>
