@@ -26,6 +26,8 @@ export default new Vuex.Store({
       dispatch('fetchGraphOneData')
     },
 
+    //This action will get the data for the number of deaths between two years
+    //that the user enters.
     fetchDeathData: ({ commit }, {payload}) => {
       const path = 'http://localhost:5000/one';
       axios.post(path, payload)
@@ -34,6 +36,7 @@ export default new Vuex.Store({
       })
     },
 
+    //This action will get the data  for the first chart. 
     fetchGraphOneData: ({commit}) => {
       console.log('fired')
       const path = 'http://localhost:5000/firstGraph';

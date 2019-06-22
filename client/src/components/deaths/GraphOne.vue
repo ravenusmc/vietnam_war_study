@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Graph One</h1>
+    <h1>Graph One Area</h1>
   </div>
 </template>
 
