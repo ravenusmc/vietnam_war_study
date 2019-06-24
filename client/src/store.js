@@ -36,7 +36,8 @@ export default new Vuex.Store({
       })
     },
 
-    //This action will get the data  for the first chart. 
+    //This action will get the data for the first chart that will show total
+    //deaths in Vietnam.
     fetchGraphOneData: ({commit}) => {
       console.log('fired')
       const path = 'http://localhost:5000/firstGraph';
