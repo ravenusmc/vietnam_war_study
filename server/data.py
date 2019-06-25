@@ -24,5 +24,5 @@ class Data():
     def get_number_of_death(self):
         pass
 
-one = Data()
-one.basic_info()
+# one = Data()
+# one.basic_info()
