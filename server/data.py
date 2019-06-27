@@ -9,7 +9,8 @@ class Data():
     def __init__(self):
         self.data = pd.read_csv('./data/VietnamConflict.csv')
 
-    #This is just a test method that's used for for testing ideas out.
+    #This is just a test method that's used for for testing ideas out. This method
+    #is only meant to help me test out ideas and not to 'test' the application
     def basic_info(self):
         print(self.data.head())
 
