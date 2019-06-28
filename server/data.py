@@ -22,7 +22,7 @@ class Data():
         return number_of_deaths
 
     #This method will get the total number of deaths by year.
-    def get_number_of_death(self):
+    def get_number_of_deaths_total(self):
         pass
 
 # one = Data()

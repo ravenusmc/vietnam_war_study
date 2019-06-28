@@ -30,10 +30,7 @@ def deathData():
 def graphOne():
     if request.method == 'POST':
         data = Data()
-        # post_data = request.get_json()
-        # yearOne = int(post_data['yearOne'])
-        # yearTwo = int(post_data['yearTwo'])
-        death_count = data.get_number_of_death()
+        death_count = data.get_number_of_deaths_total()
         return jsonify('MIke')
 
 
