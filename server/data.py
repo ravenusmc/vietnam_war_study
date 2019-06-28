@@ -23,7 +23,21 @@ class Data():
 
     #This method will get the total number of deaths by year.
     def get_number_of_deaths_total(self):
-        pass
+        #Getting the minimum year
+        first_year = self.data['FATALITY_YEAR'].min()
+        #Setting the max year. I noticed that the data goes up to 2006 but wanted
+        #to focus on the war.
+        last_year = 1975
+        death_data = []
+        #setting up a while loop to get number of deaths per year.
+        while first_year <= last_year:
+            year_data = {}
+            deaths_by_year = self.data[(self.data.FATALITY_YEAR == first_year)]
+            year_data['Year'] = first_year
+            year_data['Deaths'] = len(deaths_by_year)
+            first_year += 1
+            death_data.append(year_data)
+        print(death_data)
 
-# one = Data()
-# one.basic_info()
+one = Data()
+one.get_number_of_deaths_total()
