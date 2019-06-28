@@ -21,7 +21,7 @@ class Data():
         number_of_deaths = len(death_data_set)
         return number_of_deaths
 
-    #This method will get the total number of deaths by year
+    #This method will get the total number of deaths by year.
     def get_number_of_death(self):
         pass
 
