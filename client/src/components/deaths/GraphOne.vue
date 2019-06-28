@@ -5,8 +5,15 @@
 </template>
 
 <script>
+import * as d3 from 'd3';
+import { mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'GraphOne',
+  mounted() {
+    this.fetchGraphOneData()
+  },
 }
 </script>
 

@@ -37,7 +37,7 @@ class Data():
             year_data['Deaths'] = len(deaths_by_year)
             first_year += 1
             death_data.append(year_data)
-        print(death_data)
+        return death_data
 
 one = Data()
 one.get_number_of_deaths_total()

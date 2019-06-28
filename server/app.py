@@ -26,12 +26,11 @@ def deathData():
         death_count = data.get_total_deaths_between_years(yearOne, yearTwo)
         return jsonify(death_count)
 
-@app.route('/firstGraph', methods=['GET', 'POST'])
+@app.route('/firstGraph', methods=['GET'])
 def graphOne():
-    if request.method == 'POST':
-        data = Data()
-        death_count = data.get_number_of_deaths_total()
-        return jsonify('MIke')
+    data = Data()
+    death_data = data.get_number_of_deaths_total()
+    return jsonify(death_data)
 
 
 

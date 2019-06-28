@@ -41,9 +41,9 @@ export default new Vuex.Store({
     fetchGraphOneData: ({commit}) => {
       console.log('fired')
       const path = 'http://localhost:5000/firstGraph';
-      axios.post(path)
+      axios.get(path)
       .then((res) => {
-        console.log('Mike')
+        commit('setGraphOneData', res.data)
       })
     },
 
@@ -55,7 +55,7 @@ export default new Vuex.Store({
     },
     setGraphOneData(state, data){
       state.graphOneData = data;
-    }
+    },
   },
 
 });
