@@ -33,8 +33,8 @@ class Data():
         while first_year <= last_year:
             year_data = {}
             deaths_by_year = self.data[(self.data.FATALITY_YEAR == first_year)]
-            year_data['Year'] = first_year
-            year_data['Deaths'] = len(deaths_by_year)
+            year_data['Year'] = int(first_year)
+            year_data['Deaths'] = int(len(deaths_by_year))
             first_year += 1
             death_data.append(year_data)
         return death_data

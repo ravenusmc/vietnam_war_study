@@ -11,6 +11,11 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'GraphOne',
+  methods: {
+    ...mapActions([
+      'fetchGraphOneData',
+    ]),
+  },
   mounted() {
     this.fetchGraphOneData()
   },
