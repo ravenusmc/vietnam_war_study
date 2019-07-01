@@ -39,11 +39,14 @@ export default new Vuex.Store({
     //This action will get the data for the first chart that will show total
     //deaths in Vietnam.
     fetchGraphOneData: ({commit}) => {
-      console.log('fired')
       const path = 'http://localhost:5000/firstGraph';
       axios.get(path)
       .then((res) => {
-          console.log(res.data)
+        for (let i = 1; i <= res.data.length; i++){
+          //console.log(res.data[i][0])
+          //res.data[i][0].toString()
+        }
+        console.log(res.data)
         commit('setGraphOneData', res.data)
       })
     },
