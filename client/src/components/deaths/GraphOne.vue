@@ -1,6 +1,11 @@
 <template>
   <div>
     <h1>Graph One Area</h1>
+
+    <div>
+      <v-chart :chartData="buildGraph"></v-chart>
+    </div>
+
   </div>
 </template>
 
@@ -11,41 +16,50 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'GraphOne',
+  data() {
+    return {
+      height: 600,
+      width: 600,
+      vBarChartData: [],
+    }
+  },
   computed: {
+    ...mapGetters([
+      'graphOneData',
+    ]),
     buildGraph() {
-      return this.vBarChartData = {
-        chartType: "vBarChart",
+      return this.lineGraphData = {
+        chartType: "lineGraph",
+        selector: "lineGraph",
         label: true,
-        fill: 'green',
-        selector: "vChart",
-        title: "Roman Victories",
-        subtitle: "By 75 Year Intervals",
+        // fill: 'green',
+        title: "Vietnam War Deaths",
         width: 500,
         height: 500,
-        metric: ["Roman Victories", 'Total Battles'],
-        dim: "Interval",
+        metric: ["Deaths"],
+        dim: "Deaths",
         data: this.graphOneData,
         grid: {
           enabled: true,
           gridTicks: 25,
         },
-        overrides: {
-          palette: {
-            fill: ['#A91DEB', '#4fc08d'],
-            stroke: '#41B883'
-          },
-          x: {
-            ticks: 20
-          },
-          y: {
-            axisWidth: 40,
-          },
-        },
-        legends: {
-          enabled: true,
-          height: 5,
-          width: 50,
-        },
+        // overrides: {
+        //   palette: {
+        //     fill: ['#A91DEB', '#4fc08d'],
+        //     stroke: '#41B883'
+        //   },
+        //   x: {
+        //     ticks: 20
+        //   },
+        //   y: {
+        //     axisWidth: 40,
+        //   },
+        // },
+        // legends: {
+        //   enabled: true,
+        //   height: 5,
+        //   width: 50,
+        // },
       }
     }
   },
