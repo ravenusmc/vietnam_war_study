@@ -1,16 +1,20 @@
 <template>
   <div>
-    <h1>Graph One Area</h1>
 
     <div>
-      <v-chart :chartData="buildGraph"></v-chart>
+      <GChart
+        type="LineChart"
+        :data="chartData"
+        :options="chartOptions"
+      />
     </div>
-
+    
   </div>
 </template>
 
 <script>
 import * as d3 from 'd3';
+import { GChart } from 'vue-google-charts'
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
 
@@ -21,12 +25,20 @@ export default {
       height: 600,
       width: 600,
       vBarChartData: [],
+      chartOptions: {
+        title: 'Vietnam War Deaths',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      },
     }
   },
   computed: {
     ...mapGetters([
       'graphOneData',
     ]),
+    chartData() {
+      return this.graphOneData
+    },
     buildGraph() {
       return this.lineGraphData = {
         chartType: "lineGraph",

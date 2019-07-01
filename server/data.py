@@ -22,6 +22,25 @@ class Data():
         return number_of_deaths
 
     #This method will get the total number of deaths by year.
+    # def get_number_of_deaths_total(self):
+    #     #Getting the minimum year
+    #     first_year = self.data['FATALITY_YEAR'].min()
+    #     #Setting the max year. I noticed that the data goes up to 2006 but wanted
+    #     #to focus on the war.
+    #     last_year = 1975
+    #     death_data = []
+    #     #setting up a while loop to get number of deaths per year.
+    #     while first_year <= last_year:
+    #         year_data = {}
+    #         deaths_by_year = self.data[(self.data.FATALITY_YEAR == first_year)]
+    #         year_data['Year'] = int(first_year)
+    #         year_data['Deaths'] = int(len(deaths_by_year))
+    #         first_year += 1
+    #         death_data.append(year_data)
+    #     return death_data
+
+    #This method will get the total number of deaths by year. This formatted the
+    #data the way that Google charts wanted it.
     def get_number_of_deaths_total(self):
         #Getting the minimum year
         first_year = self.data['FATALITY_YEAR'].min()
@@ -29,14 +48,18 @@ class Data():
         #to focus on the war.
         last_year = 1975
         death_data = []
+        columns = ['Year', 'Deaths']
+        death_data.append(columns)
         #setting up a while loop to get number of deaths per year.
         while first_year <= last_year:
-            year_data = {}
+            rows = []
             deaths_by_year = self.data[(self.data.FATALITY_YEAR == first_year)]
-            year_data['Year'] = int(first_year)
-            year_data['Deaths'] = int(len(deaths_by_year))
+            #death_data[first_year] = int(len(deaths_by_year))
+            rows.append(int(first_year))
+            rows.append(int(len(deaths_by_year)))
+            death_data.append(rows)
             first_year += 1
-            death_data.append(year_data)
+        # print(death_data)
         return death_data
 
 one = Data()
