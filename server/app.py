@@ -41,8 +41,8 @@ def graphTwo():
         post_data = request.get_json()
         yearOne = int(post_data['yearOne'])
         yearTwo = int(post_data['yearTwo'])
-        data.get_data_second_graph(yearOne, yearTwo)
-        return jsonify('Mike')
+        branch_death_data = data.get_data_second_graph(yearOne, yearTwo)
+        return jsonify(branch_death_data)
 
 if __name__ == '__main__':
     app.run()

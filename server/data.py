@@ -13,6 +13,8 @@ class Data():
     #is only meant to help me test out ideas and not to 'test' the application
     def basic_info(self):
         print(self.data.head())
+        #This will get me all unique values in a column
+        print(death_data_set.BRANCH.unique())
 
     #This method will get the total number of deaths between the two years that that
     #user enters.
@@ -64,8 +66,22 @@ class Data():
 
     #This method will get the data for the second graph.
     def get_data_second_graph(self, yearOne, yearTwo):
+        branch_death_data = []
+        columns = ['Branch', 'Deaths']
+        branch_death_data.append(columns)
+        branches = ['ARMY', 'AIR FORCE', 'MARINE CORPS', 'NAVY', 'COAST GUARD']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for branch in branches:
+            rows = []
+            #This will get the number of deaths for each branch of service in between
+            #the two years that a user enters.
+            deaths = int(len(death_data_set[(death_data_set.BRANCH == branch)]))
+            rows.append(branch)
+            rows.append(deaths)
+            branch_death_data.append(rows)
+        return branch_death_data
+
 
 
 one = Data()
-one.get_data_second_graph()
+one.get_data_second_graph(1960, 1975)
