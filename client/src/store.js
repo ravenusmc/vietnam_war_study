@@ -59,6 +59,7 @@ export default new Vuex.Store({
         axios.post(path, payload)
         .then((res) => {
           console.log(res.data)
+          commit('setGraphTwoData', res.data)
         })
     }
 
@@ -70,6 +71,9 @@ export default new Vuex.Store({
     },
     setGraphOneData(state, data){
       state.graphOneData = data;
+    },
+    setGraphTwoData(state, data){
+      state.graphTwoData = data;
     },
   },
 
