@@ -24,6 +24,10 @@
         <GraphOne></GraphOne>
       </div>
 
+      <div>
+        <GraphTwo/>
+      </div>
+
     </section>
 
   </div>
@@ -33,6 +37,7 @@
 import Form from '@/components/deaths/Form.vue';
 import Card from '@/components/deaths/Card.vue';
 import GraphOne from '@/components/deaths/GraphOne.vue';
+import GraphTwo from '@/components/deaths/GraphTwo.vue';
 import { eventBus } from '../main';
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
@@ -42,6 +47,7 @@ export default {
     Form,
     Card,
     GraphOne,
+    GraphTwo,
   },
   data() {
     return {
