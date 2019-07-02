@@ -12,7 +12,7 @@
 
     <section id='infoArea'>
 
-      <div>
+      <div id='cardArea'>
         <Card
           :deathData='deathData'
           :yearOne='yearOne'
@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style scoped>
+
 #infoArea {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -85,4 +86,10 @@ export default {
   border: 2px solid red;
 }
 
+#cardArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>
