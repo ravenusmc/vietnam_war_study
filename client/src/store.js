@@ -55,7 +55,11 @@ export default new Vuex.Store({
 
     //This action will get the data for the second chart.
     fetchGraphTwoData: ({ commit }, { payload }) => {
-      console.log(payload)
+        const path = 'http://localhost:5000/secondGraph';
+        axios.post(path, payload)
+        .then((res) => {
+          console.log(res.data)
+        })
     }
 
   },

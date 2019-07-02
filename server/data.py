@@ -62,5 +62,10 @@ class Data():
         # print(death_data)
         return death_data
 
+    #This method will get the data for the second graph.
+    def get_data_second_graph(self, yearOne, yearTwo):
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+
+
 one = Data()
-one.get_number_of_deaths_total()
+one.get_data_second_graph()
