@@ -10,11 +10,13 @@ export default new Vuex.Store({
   state: {
      deathData: 0,
      graphOneData: {},
+     graphTwoData: {},
   },
 
   getters: {
     deathData: state => state.deathData,
     graphOneData: state => state.graphOneData,
+    graphTwoData: state => state.graphTwoData,
   },
 
   actions: {
@@ -24,6 +26,7 @@ export default new Vuex.Store({
     fireActions: ({ commit, dispatch }, payload) => {
       dispatch('fetchDeathData', { payload })
       dispatch('fetchGraphOneData')
+      dispatch('fetchGraphTwoData', { payload })
     },
 
     //This action will get the data for the number of deaths between two years
@@ -42,14 +45,18 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/firstGraph';
       axios.get(path)
       .then((res) => {
-        for (let i = 1; i <= res.data.length; i++){
+        //for (let i = 1; i <= res.data.length; i++){
           //console.log(res.data[i][0])
           //res.data[i][0].toString()
-        }
-        console.log(res.data)
+        //}
         commit('setGraphOneData', res.data)
       })
     },
+
+    //This action will get the data for the second chart.
+    fetchGraphTwoData: ({ commit }, { payload }) => {
+      console.log(payload)
+    }
 
   },
 
