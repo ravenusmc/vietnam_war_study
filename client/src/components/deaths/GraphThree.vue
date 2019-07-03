@@ -25,9 +25,7 @@ export default {
         title: 'Vietnam War Deaths By Religion',
         legend: { position: 'bottom' },
         'height':300,
-        vAxis: { viewWindow: {
-          min:0
-        }}
+        is3D: true,
       },
     }
   },
