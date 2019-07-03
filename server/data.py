@@ -81,6 +81,10 @@ class Data():
             branch_death_data.append(rows)
         return branch_death_data
 
+    #This method will get the data for the third graph
+    def get_data_third_graph(self, yearOne, yearTwo):
+        pass
+
 
 
 one = Data()

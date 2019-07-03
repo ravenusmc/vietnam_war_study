@@ -44,5 +44,15 @@ def graphTwo():
         branch_death_data = data.get_data_second_graph(yearOne, yearTwo)
         return jsonify(branch_death_data)
 
+#This route will get data for the third graph
+@app.route('/thirdGraph', methods=['GET', 'POST'])
+def graphThree():
+    if request.method == 'POST':
+        data = Data()
+        post_data = request.get_json()
+        yearOne = int(post_data['yearOne'])
+        yearTwo = int(post_data['yearTwo'])
+        return jsonify('WORK?!')
+
 if __name__ == '__main__':
     app.run()
