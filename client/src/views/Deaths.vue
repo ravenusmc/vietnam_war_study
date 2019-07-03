@@ -12,6 +12,14 @@
 
     <section id='infoArea'>
 
+      <div>
+        <GraphOne/>
+      </div>
+
+      <div>
+        <h1>Talk Here</h1>
+      </div>
+
       <div id='cardArea'>
         <Card
           :deathData='deathData'
@@ -21,11 +29,11 @@
       </div>
 
       <div>
-        <GraphOne></GraphOne>
+        <GraphTwo/>
       </div>
 
       <div>
-        <GraphTwo/>
+        <GraphThree/>
       </div>
 
     </section>
@@ -38,6 +46,8 @@ import Form from '@/components/deaths/Form.vue';
 import Card from '@/components/deaths/Card.vue';
 import GraphOne from '@/components/deaths/GraphOne.vue';
 import GraphTwo from '@/components/deaths/GraphTwo.vue';
+import GraphThree from '@/components/deaths/GraphThree.vue';
+
 import { eventBus } from '../main';
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
@@ -48,6 +58,7 @@ export default {
     Card,
     GraphOne,
     GraphTwo,
+    GraphThree,
   },
   data() {
     return {
