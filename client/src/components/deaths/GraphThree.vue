@@ -1,7 +1,13 @@
 <template>
   <div>
 
-    <h1>Graph Three</h1>
+    <div>
+      <GChart
+        type="PieChart"
+        :data="chartDataThree"
+        :options="chartOptions"
+      />
+    </div>
 
   </div>
 </template>
@@ -13,6 +19,26 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'GraphThree',
+  data() {
+    return {
+      chartOptions: {
+        title: 'Vietnam War Deaths By Religion',
+        legend: { position: 'bottom' },
+        'height':300,
+        vAxis: { viewWindow: {
+          min:0
+        }}
+      },
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'graphThreeData',
+    ]),
+    chartDataThree() {
+      return this.graphThreeData
+    },
+  },
 }
 </script>
 

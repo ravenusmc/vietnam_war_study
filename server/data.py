@@ -83,9 +83,25 @@ class Data():
 
     #This method will get the data for the third graph
     def get_data_third_graph(self, yearOne, yearTwo):
-        pass
-
+        religion_death_data = []
+        columns = ['Religion', 'Deaths']
+        religion_death_data.append(columns)
+        religions = ['LUTHERAN CHURCHES', 'METHODIST CHURCHES', 'BAPTIST CHURCHES',
+         'PROTESTANT, NO DENOMINATIONAL PREFERENCE', 'SOUTHERN BAPTIST CONVENTION',
+         'ROMAN CATHOLIC CHURCH', 'JUDAISM (JEWISH)', 'NO RELIGIOUS PREFERENCE',
+         'EPISCOPAL CHURCH', 'ISLAM', 'PRESBYTERIAN CHURCH (USA)',
+         'SEVENTH DAY ADVENTIST',
+         'CHURCH OF JESUS CHRIST OF LATTER DAY SAINTS (MORMON)', 'BUDDHISM',
+         'FRIENDS (QUAKERS)', 'PENTECOSTAL CHURCHES', "JEHOVAH'S WITNESSES"]
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for religion in religions:
+            rows = []
+            deaths = int(len(death_data_set[(death_data_set.RELIGION == religion)]))
+            rows.append(religion)
+            rows.append(deaths)
+            religion_death_data.append(rows)
+        return religion_death_data
 
 
 one = Data()
-one.get_data_second_graph(1960, 1975)
+one.get_data_third_graph(1960, 1975)
