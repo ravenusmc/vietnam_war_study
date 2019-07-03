@@ -94,12 +94,29 @@ class Data():
          'CHURCH OF JESUS CHRIST OF LATTER DAY SAINTS (MORMON)', 'BUDDHISM',
          'FRIENDS (QUAKERS)', 'PENTECOSTAL CHURCHES', "JEHOVAH'S WITNESSES"]
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        protestant_deaths = 0
         for religion in religions:
             rows = []
             deaths = int(len(death_data_set[(death_data_set.RELIGION == religion)]))
-            rows.append(religion)
-            rows.append(deaths)
-            religion_death_data.append(rows)
+            #I want to collectivelly count all of these religions as protestant thus
+            #I create a count that will track number of deaths for the religion. 
+            if religion == 'LUTHERAN CHURCHES' or religion == 'METHODIST CHURCHES' or \
+            religion == 'BAPTIST CHURCHES' or religion == 'PROTESTANT, NO DENOMINATIONAL PREFERENCE' or \
+            religion == 'SOUTHERN BAPTIST CONVENTION' or religion == 'EPISCOPAL CHURCH' or \
+            religion == 'PRESBYTERIAN CHURCH (USA)' or religion == 'SEVENTH DAY ADVENTIST' or \
+            religion == 'FRIENDS (QUAKERS)' or religion == 'PENTECOSTAL CHURCHES':
+                protestant_deaths = deaths + protestant_deaths
+            if religion == "JEHOVAH'S WITNESSES":
+                protestant_deaths = deaths + protestant_deaths
+                rows.append('PROTESTANT')
+                rows.append(protestant_deaths)
+                religion_death_data.append(rows)
+            elif religion == 'ROMAN CATHOLIC CHURCH' or religion == 'JUDAISM (JEWISH)' or \
+            religion == 'NO RELIGIOUS PREFERENCE' or religion == 'ISLAM' or \
+            religion == 'CHURCH OF JESUS CHRIST OF LATTER DAY SAINTS (MORMON)':
+                rows.append(religion)
+                rows.append(deaths)
+                religion_death_data.append(rows)
         return religion_death_data
 
 
