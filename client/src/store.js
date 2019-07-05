@@ -12,6 +12,7 @@ export default new Vuex.Store({
      graphOneData: {},
      graphTwoData: {},
      graphThreeData: {},
+     graphFourData: {},
   },
 
   getters: {
@@ -19,6 +20,7 @@ export default new Vuex.Store({
     graphOneData: state => state.graphOneData,
     graphTwoData: state => state.graphTwoData,
     graphThreeData: state => state.graphThreeData,
+    graphFourData: state => state.graphFourData,
   },
 
   actions: {
@@ -30,6 +32,7 @@ export default new Vuex.Store({
       dispatch('fetchGraphOneData')
       dispatch('fetchGraphTwoData', { payload })
       dispatch('fetchGraphThreeData', { payload })
+      dispatch('fetchGraphFourData', { payload })
     },
 
     //This action will get the data for the number of deaths between two years
@@ -72,7 +75,16 @@ export default new Vuex.Store({
       .then((res) => {
         commit('setGraphThreeData', res.data)
       })
-    }
+    },
+
+    //This action will get the data for the fourth chart.
+    fetchGraphFourData: ({ commit }, { payload }) => {
+      const path = 'http://localhost:5000/fourthGraph';
+      axios.post(path, payload)
+      .then((res) => {
+        commit('setGraphFourData', res.data)
+      })
+    },
 
   },
 
@@ -89,6 +101,9 @@ export default new Vuex.Store({
     setGraphThreeData(state, data){
       state.graphThreeData = data;
     },
+    setGraphFourData(state, data){
+      state.graphFourData = data;
+    }
   },
 
 });
