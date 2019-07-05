@@ -82,6 +82,7 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/fourthGraph';
       axios.post(path, payload)
       .then((res) => {
+        console.log(res.data)
         commit('setGraphFourData', res.data)
       })
     },

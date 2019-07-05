@@ -99,7 +99,7 @@ class Data():
             rows = []
             deaths = int(len(death_data_set[(death_data_set.RELIGION == religion)]))
             #I want to collectivelly count all of these religions as protestant thus
-            #I create a count that will track number of deaths for the religion. 
+            #I create a count that will track number of deaths for the religion.
             if religion == 'LUTHERAN CHURCHES' or religion == 'METHODIST CHURCHES' or \
             religion == 'BAPTIST CHURCHES' or religion == 'PROTESTANT, NO DENOMINATIONAL PREFERENCE' or \
             religion == 'SOUTHERN BAPTIST CONVENTION' or religion == 'EPISCOPAL CHURCH' or \
@@ -119,6 +119,14 @@ class Data():
                 religion_death_data.append(rows)
         return religion_death_data
 
+    #This method will get the data for the fourth graph
+    def get_data_fourth_graph(self, yearOne, yearTwo):
+        races = ['WHITE', 'BLACK OR AFRICAN AMERICAN'
+         'AMERICAN INDIAN/ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE',
+         'ASIAN  (ALL BUT USAR INCLUDE PACIFIC ISLANDER IN THIS CODE)',
+         'AMERICAN INDIAN/ALASKA NATIVE', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER  (USAR SUBMITS F FOR PACIFIC ISLANDER)']
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+
 
 one = Data()
-one.get_data_third_graph(1960, 1975)
+one.get_data_fourth_graph(1960, 1975)
