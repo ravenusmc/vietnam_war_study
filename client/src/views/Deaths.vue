@@ -36,6 +36,10 @@
         <GraphThree/>
       </div>
 
+      <div>
+        <GraphFour/>
+      </div>
+
     </section>
 
   </div>
@@ -47,6 +51,7 @@ import Card from '@/components/deaths/Card.vue';
 import GraphOne from '@/components/deaths/GraphOne.vue';
 import GraphTwo from '@/components/deaths/GraphTwo.vue';
 import GraphThree from '@/components/deaths/GraphThree.vue';
+import GraphFour from '@/components/deaths/GraphFour.vue';
 
 import { eventBus } from '../main';
 import { mapActions } from 'vuex';
@@ -59,6 +64,7 @@ export default {
     GraphOne,
     GraphTwo,
     GraphThree,
+    GraphFour,
   },
   data() {
     return {
