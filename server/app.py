@@ -63,8 +63,8 @@ def graphFour():
         post_data = request.get_json()
         yearOne = int(post_data['yearOne'])
         yearTwo = int(post_data['yearTwo'])
-        #race_death_data = data.get_data_third_graph(yearOne, yearTwo)
-        return jsonify('Four')
+        race_death_data = data.get_data_third_graph(yearOne, yearTwo)
+        return jsonify(race_death_data)
 
 if __name__ == '__main__':
     app.run()
