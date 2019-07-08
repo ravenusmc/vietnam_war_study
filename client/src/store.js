@@ -73,6 +73,7 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/thirdGraph';
       axios.post(path, payload)
       .then((res) => {
+        console.log(res.data)
         commit('setGraphThreeData', res.data)
       })
     },

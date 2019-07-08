@@ -122,17 +122,16 @@ class Data():
     #This method will get the data for the fourth graph
     def get_data_fourth_graph(self, yearOne, yearTwo):
         race_death_data = []
-        races = ['WHITE', 'BLACK OR AFRICAN AMERICAN',
-         'AMERICAN INDIAN/ALASKA NATIVE, ASIAN, BLACK OR AFRICAN AMERICAN, NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER, WHITE',
-         'ASIAN  (ALL BUT USAR INCLUDE PACIFIC ISLANDER IN THIS CODE)',
-         'AMERICAN INDIAN/ALASKA NATIVE', 'NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER  (USAR SUBMITS F FOR PACIFIC ISLANDER)']
+        columns = ['Race', 'Deaths']
+        race_death_data.append(columns)
+        races = ['WHITE', 'BLACK OR AFRICAN AMERICAN']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
         for race in races:
             rows = []
             deaths = int(len(death_data_set[(death_data_set.ETHNICITY == race)]))
             rows.append(race)
             rows.append(deaths)
-            religion_death_data.append(rows)
+            race_death_data.append(rows)
         return race_death_data
 
 
