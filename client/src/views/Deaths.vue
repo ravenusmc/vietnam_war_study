@@ -17,7 +17,7 @@
       </div>
 
       <div>
-        <h1>Talk Here</h1>
+        <Talk/>
       </div>
 
       <div id='cardArea'>
@@ -48,6 +48,7 @@
 <script>
 import Form from '@/components/deaths/Form.vue';
 import Card from '@/components/deaths/Card.vue';
+import Talk from '@/components/deaths/Talk.vue';
 import GraphOne from '@/components/deaths/GraphOne.vue';
 import GraphTwo from '@/components/deaths/GraphTwo.vue';
 import GraphThree from '@/components/deaths/GraphThree.vue';
@@ -61,6 +62,7 @@ export default {
   components: {
     Form,
     Card,
+    Talk,
     GraphOne,
     GraphTwo,
     GraphThree,
