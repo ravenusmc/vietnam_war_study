@@ -117,4 +117,12 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+@media only all and (max-width: 950px){
+
+  #infoArea {
+    grid-template-columns: 1fr;
+  }
+
+}
 </style>
