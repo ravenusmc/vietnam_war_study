@@ -38,6 +38,18 @@ export default {
       return this.graphFourData
     },
   },
+  methods: {
+    ...mapActions([
+      'fetchGraphFourData',
+    ]),
+  },
+  mounted() {
+    const payload = {
+      'yearOne': '1960',
+      'yearTwo': '1975'
+    }
+    this.fetchGraphFourData({payload})
+  },
 }
 </script>
 

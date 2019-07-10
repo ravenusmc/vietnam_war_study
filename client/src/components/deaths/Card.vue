@@ -13,14 +13,23 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Card',
   props: ['deathData', 'yearOne', 'yearTwo'],
-  data() {
-    return {
-
+  methods: {
+    ...mapActions([
+      'fetchDeathData',
+    ]),
+  },
+  mounted() {
+    const payload = {
+      'yearOne': '1960',
+      'yearTwo': '1975'
     }
-  }
+    this.fetchDeathData({payload})
+  },
 }
 </script>
 

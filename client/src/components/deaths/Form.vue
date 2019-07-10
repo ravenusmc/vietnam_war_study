@@ -4,7 +4,8 @@
     <header>
       <h1>Examining Deaths</h1>
       <p>
-        The goal here is to see how deaths change through out a given time period.
+        The goal here is to see how deaths change through out a given time period.<br/>
+        The initial years are set from 1960 to 1975.
       </p>
     </header>
 
@@ -42,7 +43,7 @@ export default {
       evt.preventDefault();
       if (this.yearOne <= 1955){
         alert('The first year must be greater than 1955!')
-      }else if (this.yearTwo >= 1975){
+      }else if (this.yearTwo >= 1976){
         alert('The second year must not be greater than 1975!')
       }else if (this.yearOne >= this.yearTwo){
         alert('The first year must be less than the second year!')

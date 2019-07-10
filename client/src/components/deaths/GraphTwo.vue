@@ -39,6 +39,18 @@
         return this.graphTwoData
       },
     },
+    methods: {
+      ...mapActions([
+        'fetchGraphTwoData',
+      ]),
+    },
+    mounted() {
+      const payload = {
+        'yearOne': '1960',
+        'yearTwo': '1975'
+      }
+      this.fetchGraphTwoData({payload})
+    },
   }
 </script>
 

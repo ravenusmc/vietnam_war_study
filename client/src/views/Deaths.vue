@@ -71,8 +71,8 @@ export default {
   data() {
     return {
       deaths: 0,
-      yearOne: 0,
-      yearTwo: 0,
+      yearOne: 1960,
+      yearTwo: 1975,
     }
   },
   computed: {

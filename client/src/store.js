@@ -51,10 +51,6 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/firstGraph';
       axios.get(path)
       .then((res) => {
-        //for (let i = 1; i <= res.data.length; i++){
-          //console.log(res.data[i][0])
-          //res.data[i][0].toString()
-        //}
         commit('setGraphOneData', res.data)
       })
     },
@@ -73,7 +69,6 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/thirdGraph';
       axios.post(path, payload)
       .then((res) => {
-        console.log(res.data)
         commit('setGraphThreeData', res.data)
       })
     },
@@ -83,7 +78,6 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/fourthGraph';
       axios.post(path, payload)
       .then((res) => {
-        console.log(res.data)
         commit('setGraphFourData', res.data)
       })
     },

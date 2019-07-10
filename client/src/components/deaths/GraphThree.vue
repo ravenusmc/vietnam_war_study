@@ -37,6 +37,18 @@ export default {
       return this.graphThreeData
     },
   },
+  methods: {
+    ...mapActions([
+      'fetchGraphThreeData',
+    ]),
+  },
+  mounted() {
+    const payload = {
+      'yearOne': '1960',
+      'yearTwo': '1975'
+    }
+    this.fetchGraphThreeData({payload})
+  },
 }
 </script>
 
