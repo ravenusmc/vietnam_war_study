@@ -40,11 +40,21 @@ export default {
   methods: {
     submitYears(evt) {
       evt.preventDefault();
-      const queryData = {
-        yearOne: this.yearOne,
-        yearTwo: this.yearTwo,
-      };
-      eventBus.$emit('dateData', queryData);
+      if (this.yearOne <= 1955){
+        alert('The first year must be greater than 1955!')
+      }else if (this.yearTwo >= 1975){
+        alert('The second year must not be greater than 1975!')
+      }else if (this.yearOne >= this.yearTwo){
+        alert('The first year must be less than the second year!')
+      }else if (this.yearTwo <= this.yearOne){
+        alert('The second year must be greater than the first year!')
+      }else {
+        const queryData = {
+          yearOne: this.yearOne,
+          yearTwo: this.yearTwo,
+        };
+        eventBus.$emit('dateData', queryData);
+      }
     }
   }
 }
