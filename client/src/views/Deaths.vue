@@ -40,6 +40,10 @@
         <GraphFour/>
       </div>
 
+      <div>
+        <GraphFive/>
+      </div>
+
     </section>
 
   </div>
@@ -53,6 +57,7 @@ import GraphOne from '@/components/deaths/GraphOne.vue';
 import GraphTwo from '@/components/deaths/GraphTwo.vue';
 import GraphThree from '@/components/deaths/GraphThree.vue';
 import GraphFour from '@/components/deaths/GraphFour.vue';
+import GraphFive from '@/components/deaths/GraphFive.vue';
 
 import { eventBus } from '../main';
 import { mapActions } from 'vuex';
@@ -67,6 +72,7 @@ export default {
     GraphTwo,
     GraphThree,
     GraphFour,
+    GraphFive,
   },
   data() {
     return {
@@ -108,7 +114,6 @@ export default {
   margin-top: 100px;
   margin-left: 5%;
   margin-right: 5%;
-  border: 2px solid red;
 }
 
 #cardArea {
