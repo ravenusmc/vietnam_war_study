@@ -38,7 +38,7 @@
       <hr>
 
       <div class='gif_div'>
-        <img src='@/assets/img/gif_one.gif'>
+        <img class='gif_image' src='@/assets/img/gif_one.gif'>
       </div>
 
     </section>
@@ -67,6 +67,11 @@ export default {
 hr {
   width: 10%;
   border-color: red;
+}
+
+.gif_image {
+  height: 400px;
+  width: 80%;
 }
 
 
