@@ -4,8 +4,10 @@ import router from './router';
 import store from './store';
 import VueMaterial from 'vue-material';
 import 'vue-material/dist/vue-material.min.css';
-import Chart from 'v-chart-plugin'
-import VueGoogleCharts from 'vue-google-charts'
+import Chart from 'v-chart-plugin';
+import VueGoogleCharts from 'vue-google-charts';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
 Vue.config.productionTip = false;
 
@@ -15,6 +17,8 @@ Vue.use(VueMaterial)
 Vue.use(Chart);
 //Google charts plugin
 Vue.use(VueGoogleCharts)
+//Vuetify code
+Vue.use(Vuetify)
 
 //Vue bus
 export const eventBus = new Vue();

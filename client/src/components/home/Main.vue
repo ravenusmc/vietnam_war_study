@@ -17,8 +17,9 @@
         really happened.
         <b>-Henry Kissinger</b>
       </p>
-      <hr>
 
+      <hr>
+      
       <div>
         <h2>Purpose</h2>
         <p>
