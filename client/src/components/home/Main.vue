@@ -18,8 +18,6 @@
         <b>-Henry Kissinger</b>
       </p>
 
-      <hr>
-      
       <div>
         <h2>Purpose</h2>
         <p>
@@ -31,12 +29,10 @@
           step in learning about Vietnam.
         </p>
       </div>
-      <hr>
 
       <div>
         <h2>Sections</h2>
       </div>
-      <hr>
 
       <div class='gif_div'>
         <img class='gif_image' src='@/assets/img/gif_one.gif'>
@@ -63,11 +59,6 @@ export default {
   font-weight: 100;
   line-height: normal;
   font-family: Benton Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-}
-
-hr {
-  width: 10%;
-  border-color: red;
 }
 
 .gif_image {
