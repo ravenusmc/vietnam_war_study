@@ -17,9 +17,12 @@
          <input type="number" v-model='yearOne' name="yearOne" placeholder="Enter First Year">&nbsp;
          <label>Year Two:</label>
          <input type="number" v-model="yearTwo" name="yearTwo" placeholder="Enter Second Year">
-         <div class='button_div'>
+         <v-btn type="submit" color='yellow red--text'>
+           Submit
+         </v-btn>
+         <!-- <div class='button_div'>
            <button class="btn btn-primary font" type="submit">Submit</button>
-         </div>
+         </div> -->
       </form>
 
     </section>
