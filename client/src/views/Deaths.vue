@@ -41,7 +41,11 @@
       </div>
 
       <div>
-        <GraphCard/>
+        <GraphCard :typeOne='typeOne'></GraphCard>
+      </div>
+
+      <div>
+        <GraphCard :typeOne='typeOne'></GraphCard>
       </div>
 
     </section>
@@ -81,6 +85,7 @@ export default {
       deaths: 0,
       yearOne: 1960,
       yearTwo: 1975,
+      typeOne: 'BarChart',
     }
   },
   computed: {
@@ -89,7 +94,6 @@ export default {
         'graphOneData',
     ]),
     getDeaths(){
-      console.log(this.deathData)
       this.deaths = this.deathData
     }
   },

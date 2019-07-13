@@ -1,14 +1,14 @@
 <template>
   <div>
 
-    <h1>Graph Card</h1>
-    <!-- <div>
+    <h1>{{ typeOne }}</h1>
+    <div>
       <GChart
-        type="PieChart"
+        type="TypeOne"
         :data="chartDataThree"
         :options="chartOptions"
       />
-    </div> -->
+    </div>
 
   </div>
 </template>
@@ -16,6 +16,7 @@
 <script>
 export default {
   name: 'GraphCard',
+  props: ['typeOne'],
 }
 </script>
 
