@@ -109,6 +109,13 @@ export default {
       this.fireActions(queryData)
     })
   },
+  mounted() {
+    const payload = {
+      'yearOne': '1960',
+      'yearTwo': '1975'
+    }
+    //this.fetchGraphFiveData({payload})
+  },
 }
 </script>
 

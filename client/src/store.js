@@ -13,6 +13,7 @@ export default new Vuex.Store({
      graphTwoData: {},
      graphThreeData: {},
      graphFourData: {},
+     graphFiveData: {},
   },
 
   getters: {
@@ -21,6 +22,7 @@ export default new Vuex.Store({
     graphTwoData: state => state.graphTwoData,
     graphThreeData: state => state.graphThreeData,
     graphFourData: state => state.graphFourData,
+    graphFiveData: state => state.graphFiveData,
   },
 
   actions: {
@@ -82,6 +84,15 @@ export default new Vuex.Store({
       })
     },
 
+    //This action will get the data for the fifth chart
+    fetchGraphFiveData: ({ commit }, {vpayload }) => {
+      const path = 'http://localhost:5000/fifthGraph';
+      axios.post(path, payload)
+      .then((res) => {
+        commit('setGraphFiveData', res.data)
+      })
+    }
+
   },
 
   mutations: {
@@ -99,6 +110,9 @@ export default new Vuex.Store({
     },
     setGraphFourData(state, data){
       state.graphFourData = data;
+    },
+    setGraphFiveData(state, data){
+      state.graphFiveData = data;
     }
   },
 
