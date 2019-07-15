@@ -41,7 +41,10 @@
       </div>
 
       <div>
-        <GraphCard :typeOne='typeOne'></GraphCard>
+        <GraphCard
+          :typeOne='typeOne'
+          :data='graphFiveData'>
+        </GraphCard>
       </div>
 
       <div>
@@ -85,13 +88,14 @@ export default {
       deaths: 0,
       yearOne: 1960,
       yearTwo: 1975,
-      typeOne: 'BarChart',
+      typeOne: "BarChart",
     }
   },
   computed: {
     ...mapGetters([
         'deathData',
         'graphOneData',
+        'graphFiveData',
     ]),
     getDeaths(){
       this.deaths = this.deathData
@@ -100,6 +104,7 @@ export default {
   methods: {
   ...mapActions([
       'fireActions',
+      'fireActionsTwo',
     ]),
   },
   created() {
@@ -114,7 +119,7 @@ export default {
       'yearOne': '1960',
       'yearTwo': '1975'
     }
-    //this.fetchGraphFiveData({payload})
+    this.fireActionsTwo({payload})
   },
 }
 </script>

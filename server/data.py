@@ -142,8 +142,7 @@ class Data():
         enlisted_death_data.append(columns)
         ranks = ['PVT', 'PFC', 'LCPL', 'CPL', 'SP4', 'SGT', 'SSGT', 'SSG', 'SFC',
         'GYSGT', 'MSGT', 'MSG', '1STSGT', '1SG', 'TSGT', 'SMSGT', 'MGYSGT', 'CMSGT',
-        'SGTMAJ', 'PO3', 'FN','A1C', 'SP5', 'SP6','PO1', 'HN',
-        'PO2', 'PSG', 'CADET']
+        'SGTMAJ']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
         for rank in ranks:
             rows = []
