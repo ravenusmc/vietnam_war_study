@@ -14,6 +14,7 @@ export default new Vuex.Store({
      graphThreeData: {},
      graphFourData: {},
      graphFiveData: {},
+     graphSixData: {},
   },
 
   getters: {
@@ -23,6 +24,7 @@ export default new Vuex.Store({
     graphThreeData: state => state.graphThreeData,
     graphFourData: state => state.graphFourData,
     graphFiveData: state => state.graphFiveData,
+    graphSixData: state => state.graphSixData,
   },
 
   actions: {
@@ -36,10 +38,12 @@ export default new Vuex.Store({
       dispatch('fetchGraphThreeData', { payload })
       dispatch('fetchGraphFourData', { payload })
       dispatch('fetchGraphFiveData', { payload })
+      dispatch('fetchGraphSixData', { payload })
     },
 
     fireActionsTwo: ({ dispatch }, payload) => {
       dispatch('fetchGraphFiveData', payload)
+      dispath('fetchGraphSixData', payload)
     },
 
     //This action will get the data for the number of deaths between two years
@@ -96,6 +100,15 @@ export default new Vuex.Store({
       .then((res) => {
         commit('setGraphFiveData', res.data)
       })
+    },
+
+    //This action will get the data for six chart
+    fetchGraphSixData: ({ commit }, {payload}) => {
+      const path = 'http://localhost:5000/sixthGraph';
+      axios.post(path, payload)
+      .then((res) => {
+        commit('setGraphSixData', res.data)
+      })
     }
 
   },
@@ -118,6 +131,9 @@ export default new Vuex.Store({
     },
     setGraphFiveData(state, data){
       state.graphFiveData = data;
+    },
+    setGraphSixData(state, data){
+      state.graphSixData = data
     }
   },
 
