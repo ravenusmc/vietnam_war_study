@@ -152,6 +152,23 @@ class Data():
             enlisted_death_data.append(rows)
         return enlisted_death_data
 
+    #This method will get the data for the sixth graph which deals with officer
+    #ranks
+    def get_data_sixth_graph(self, yearOne, yearTwo):
+        officer_death_data = []
+        columns = ['Rank', 'Deaths']
+        officer_death_data.append(columns)
+        ranks = ['2LT', '2NDLT', '1LT', '1STLT', 'CPT','CAPT', 'MAJ', 'LTC',
+        'LTCOL', 'COL', 'BG', 'BGEN', 'MG', 'MAJGEN', 'WO', 'WO-1', 'WO1', 'CW2', 'CW3',
+        'CWO2', 'CWO3', 'CWO-4', 'CW4', 'CWO4']
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for rank in ranks:
+            rows = []
+            deaths = int(len(death_data_set[(death_data_set.RANK == rank)]))
+            rows.append(rank)
+            rows.append(deaths)
+            officer_death_data.append(rows)
+        return officer_death_data
 
-# one = Data()
-# one.get_data_fifth_graph(1960, 1965)
+one = Data()
+one.get_data_sixth_graph(1960, 1965)

@@ -43,7 +43,7 @@ export default new Vuex.Store({
 
     fireActionsTwo: ({ dispatch }, payload) => {
       dispatch('fetchGraphFiveData', payload)
-      dispath('fetchGraphSixData', payload)
+      dispatch('fetchGraphSixData', payload)
     },
 
     //This action will get the data for the number of deaths between two years
@@ -107,6 +107,7 @@ export default new Vuex.Store({
       const path = 'http://localhost:5000/sixthGraph';
       axios.post(path, payload)
       .then((res) => {
+        console.log(res.data)
         commit('setGraphSixData', res.data)
       })
     }

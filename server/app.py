@@ -66,7 +66,7 @@ def graphFour():
         race_death_data = data.get_data_fourth_graph(yearOne, yearTwo)
         return jsonify(race_death_data)
 
-#This route will get the data for the fourth graph
+#This route will get the data for the fifth graph
 @app.route('/fifthGraph', methods=['GET', 'POST'])
 def graphFive():
     if request.method == 'POST':
@@ -76,6 +76,17 @@ def graphFive():
         yearTwo = int(post_data['yearTwo'])
         enlisted_death_data = data.get_data_fifth_graph(yearOne, yearTwo)
         return jsonify(enlisted_death_data)
+
+#This route will get the data for the sixth graph
+@app.route('/sixthGraph', methods=['GET', 'POST'])
+def graphSix():
+    if request.method == 'POST':
+        data = Data()
+        post_data = request.get_json()
+        yearOne = int(post_data['yearOne'])
+        yearTwo = int(post_data['yearTwo'])
+        officer_death_data = data.get_data_sixth_graph(yearOne, yearTwo)
+        return jsonify(officer_death_data)
 
 if __name__ == '__main__':
     app.run()
