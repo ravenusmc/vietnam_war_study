@@ -43,7 +43,8 @@
       <div>
         <GraphCard
           :typeOne='typeOne'
-          :data='graphFiveData'>
+          :data='graphFiveData'
+          :options='chartOptionsFive'>
         </GraphCard>
       </div>
 
@@ -89,6 +90,14 @@ export default {
       yearOne: 1960,
       yearTwo: 1975,
       typeOne: "BarChart",
+      chartOptionsFive: {
+        title: 'Vietnam War Deaths By Enlisted Rank',
+        legend: { position: 'bottom' },
+        'height':300,
+        vAxis: { viewWindow: {
+          min:0
+        }}
+      },
     }
   },
   computed: {

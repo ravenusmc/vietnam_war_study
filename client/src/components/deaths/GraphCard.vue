@@ -1,13 +1,11 @@
 <template>
   <div>
-
-    <!-- <h1>{{ data }}</h1> -->
-    <h1>{{ typeOne }}</h1>
+    
     <div>
       <GChart
         :type="typeOne"
         :data="data"
-        :options="chartOptions"
+        :options="options"
       />
     </div>
 
@@ -19,7 +17,7 @@ import { GChart } from 'vue-google-charts'
 
 export default {
   name: 'GraphCard',
-  props: ['typeOne', 'data'],
+  props: ['typeOne', 'data', 'options'],
   data() {
     return {
       chartOptions: {
