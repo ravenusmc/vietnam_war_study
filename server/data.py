@@ -14,7 +14,7 @@ class Data():
     def basic_info(self):
         print(self.data.head())
         #This will get me all unique values in a column
-        print(death_data_set.BRANCH.unique())
+        print(self.data.RANK.unique())
 
     #This method will get the total number of deaths between the two years that that
     #user enters.
@@ -134,6 +134,25 @@ class Data():
             race_death_data.append(rows)
         return race_death_data
 
+    #This method will get the data for the fifth graph which deals with enlisted
+    #ranks
+    def get_data_fifth_graph(self, yearOne, yearTwo):
+        enlisted_death_data = []
+        columns = ['Rank', 'Deaths']
+        enlisted_death_data.append(columns)
+        ranks = ['PVT', 'PFC', 'LCPL', 'CPL', 'SP4', 'SGT', 'SSGT', 'SSG', 'SFC',
+        'GYSGT', 'MSGT', 'MSG', '1STSGT', '1SG', 'TSGT', 'SMSGT', 'MGYSGT', 'CMSGT',
+        'SGTMAJ', 'PO3', 'FN','A1C', 'SP5', 'SP6','PO1', 'HN',
+        'PO2', 'PSG', 'CADET']
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for rank in ranks:
+            rows = []
+            deaths = int(len(death_data_set[(death_data_set.RANK == rank)]))
+            rows.append(rank)
+            rows.append(deaths)
+            enlisted_death_data.append(rows)
+        return enlisted_death_data
 
-one = Data()
-one.get_data_fourth_graph(1960, 1975)
+
+# one = Data()
+# one.get_data_fifth_graph(1960, 1965)
