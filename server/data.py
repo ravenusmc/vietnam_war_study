@@ -23,24 +23,6 @@ class Data():
         number_of_deaths = len(death_data_set)
         return number_of_deaths
 
-    #This method will get the total number of deaths by year.
-    # def get_number_of_deaths_total(self):
-    #     #Getting the minimum year
-    #     first_year = self.data['FATALITY_YEAR'].min()
-    #     #Setting the max year. I noticed that the data goes up to 2006 but wanted
-    #     #to focus on the war.
-    #     last_year = 1975
-    #     death_data = []
-    #     #setting up a while loop to get number of deaths per year.
-    #     while first_year <= last_year:
-    #         year_data = {}
-    #         deaths_by_year = self.data[(self.data.FATALITY_YEAR == first_year)]
-    #         year_data['Year'] = int(first_year)
-    #         year_data['Deaths'] = int(len(deaths_by_year))
-    #         first_year += 1
-    #         death_data.append(year_data)
-    #     return death_data
-
     #This method will get the total number of deaths by year. This formatted the
     #data the way that Google charts wanted it.
     def get_number_of_deaths_total(self):
@@ -159,14 +141,43 @@ class Data():
         columns = ['Rank', 'Deaths']
         officer_death_data.append(columns)
         ranks = ['2LT', '2NDLT', '1LT', '1STLT', 'CPT','CAPT', 'MAJ', 'LTC',
-        'LTCOL', 'COL', 'BG', 'BGEN', 'MG', 'MAJGEN']
+        'LTCOL', 'COL']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        secondLt_deaths = 0
+        firstLt_deaths = 0
+        capt_deaths = 0
+        LTC_deaths = 0
         for rank in ranks:
             rows = []
             deaths = int(len(death_data_set[(death_data_set.RANK == rank)]))
-            rows.append(rank)
-            rows.append(deaths)
-            officer_death_data.append(rows)
+            if rank == '2LT' or rank == '2NDLT':
+                secondLt_deaths = deaths + secondLt_deaths
+                if rank == '2NDLT':
+                    rows.append('2nd Lt')
+                    rows.append(secondLt_deaths)
+                    officer_death_data.append(rows)
+            elif rank == '1LT' or rank == '1STLT':
+                firstLt_deaths = deaths + firstLt_deaths
+                if rank == '1STLT':
+                    rows.append('1st Lt')
+                    rows.append(firstLt_deaths)
+                    officer_death_data.append(rows)
+            elif rank == 'CPT' or rank == 'CAPT':
+                capt_deaths = deaths + capt_deaths
+                if rank == 'CAPT':
+                    rows.append('Capt')
+                    rows.append(capt_deaths)
+                    officer_death_data.append(rows)
+            elif rank == 'LTC' or rank == 'LTCOL':
+                LTC_deaths = deaths + LTC_deaths
+                if rank == 'LTCOL':
+                    rows.append('Lt Col')
+                    rows.append(LTC_deaths)
+                    officer_death_data.append(rows)
+            else:
+                rows.append(rank)
+                rows.append(deaths)
+                officer_death_data.append(rows)
         return officer_death_data
 
     #This method will get the data for the seventh graph which deals with warrant officer

@@ -1,13 +1,15 @@
 <template>
   <div>
-    
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Vietnam Deaths</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ yearOne }} - {{ yearTwo }}</h6>
-        <p class="card-text">{{deathData}}</p>
-      </div>
-    </div>
+
+    <v-card>
+      <v-card-title primary-title>
+        <div>
+          <h3 class="headline mb-0">Vietnam War Deaths</h3>
+          <div> {{ yearOne }} - {{ yearTwo }} </div>
+          <p class="card-text">{{deathData}}</p>
+        </div>
+      </v-card-title>
+    </v-card>
 
   </div>
 </template>
