@@ -49,7 +49,11 @@
       </div>
 
       <div>
-        <GraphCard :typeOne='typeOne'></GraphCard>
+        <GraphCard
+          :typeOne='typeOne'
+          :data='graphSixData'
+          :options='chartOptionsSix'>
+        </GraphCard>
       </div>
 
     </section>
@@ -98,6 +102,14 @@ export default {
           min:0
         }}
       },
+      chartOptionsSix: {
+        title: 'Vietnam War Deaths By Officer Rank',
+        legend: { position: 'bottom' },
+        'height':300,
+        vAxis: { viewWindow: {
+          min:0
+        }}
+      },
     }
   },
   computed: {
@@ -105,6 +117,7 @@ export default {
         'deathData',
         'graphOneData',
         'graphFiveData',
+        'graphSixData',
     ]),
     getDeaths(){
       this.deaths = this.deathData
