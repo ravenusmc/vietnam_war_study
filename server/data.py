@@ -123,15 +123,50 @@ class Data():
         columns = ['Rank', 'Deaths']
         enlisted_death_data.append(columns)
         ranks = ['PVT', 'PFC', 'LCPL', 'CPL', 'SP4', 'SGT', 'SSGT', 'SSG', 'SFC',
-        'GYSGT', 'MSGT', 'MSG', '1STSGT', '1SG', 'TSGT', 'SMSGT', 'MGYSGT', 'CMSGT',
-        'SGTMAJ']
+        'GYSGT', 'MSGT', 'MSG', '1STSGT', '1SG', 'MGYSGT', 'SGTMAJ']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        E4_deaths = 0
+        E6_deaths = 0
+        E7_deaths = 0
+        E8_deaths = 0
+        E9_deaths = 0
         for rank in ranks:
             rows = []
             deaths = int(len(death_data_set[(death_data_set.RANK == rank)]))
-            rows.append(rank)
-            rows.append(deaths)
-            enlisted_death_data.append(rows)
+            if rank == 'CPL' or rank == 'SP4':
+                E4_deaths = deaths + E4_deaths
+                if rank == 'SP4':
+                    rows.append('Cpl')
+                    rows.append(E4_deaths)
+                    enlisted_death_data.append(rows)
+            elif rank == 'SSGT' or rank == 'SSG':
+                E6_deaths = deaths + E6_deaths
+                if rank == 'SSG':
+                    rows.append('SSgt')
+                    rows.append(E6_deaths)
+                    enlisted_death_data.append(rows)
+            elif rank == 'SFC' or rank == 'GYSGT':
+                E7_deaths = deaths + E7_deaths
+                if rank == 'GYSGT':
+                    rows.append('GYSgt')
+                    rows.append(E7_deaths)
+                    enlisted_death_data.append(rows)
+            elif rank == 'MSGT' or rank == 'MSG' or rank == '1STSGT' or rank == '1SG':
+                E8_deaths = deaths + E8_deaths
+                if rank == '1SG':
+                    rows.append('1st Sgt')
+                    rows.append(E7_deaths)
+                    enlisted_death_data.append(rows)
+            elif rank == 'MGYSGT' or rank == 'SGTMAJ':
+                E9_deaths = deaths + E9_deaths
+                if rank == 'SGTMAJ':
+                    rows.append('SGTMAJ')
+                    rows.append(E9_deaths)
+                    enlisted_death_data.append(rows)
+            else:
+                rows.append(rank)
+                rows.append(deaths)
+                enlisted_death_data.append(rows)
         return enlisted_death_data
 
     #This method will get the data for the sixth graph which deals with officer
