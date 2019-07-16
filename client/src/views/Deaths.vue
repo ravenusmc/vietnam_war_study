@@ -49,6 +49,9 @@
       </div>
 
       <div>
+      </div>
+
+      <div>
         <GraphCard
           :typeOne='typeOne'
           :data='graphSixData'
