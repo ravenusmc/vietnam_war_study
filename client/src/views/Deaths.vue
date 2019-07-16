@@ -49,6 +49,11 @@
       </div>
 
       <div>
+        <GraphCard
+          :typeOne='typeOne'
+          :data='graphSevenData'
+          :options='chartOptionsSeven'>
+        </GraphCard>
       </div>
 
       <div>
@@ -113,6 +118,14 @@ export default {
           min:0
         }}
       },
+      chartOptionsSeven: {
+        title: 'Vietnam War Deaths By Warrant Officer Rank',
+        legend: { position: 'bottom' },
+        'height':300,
+        vAxis: { viewWindow: {
+          min:0
+        }}
+      },
     }
   },
   computed: {
@@ -121,6 +134,7 @@ export default {
         'graphOneData',
         'graphFiveData',
         'graphSixData',
+        'graphSevenData',
     ]),
     getDeaths(){
       this.deaths = this.deathData

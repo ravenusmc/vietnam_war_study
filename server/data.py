@@ -159,8 +159,7 @@ class Data():
         columns = ['Rank', 'Deaths']
         officer_death_data.append(columns)
         ranks = ['2LT', '2NDLT', '1LT', '1STLT', 'CPT','CAPT', 'MAJ', 'LTC',
-        'LTCOL', 'COL', 'BG', 'BGEN', 'MG', 'MAJGEN', 'WO', 'WO-1', 'WO1', 'CW2', 'CW3',
-        'CWO2', 'CWO3', 'CWO-4', 'CW4', 'CWO4']
+        'LTCOL', 'COL', 'BG', 'BGEN', 'MG', 'MAJGEN']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
         for rank in ranks:
             rows = []
@@ -170,5 +169,21 @@ class Data():
             officer_death_data.append(rows)
         return officer_death_data
 
-one = Data()
-one.get_data_sixth_graph(1960, 1965)
+    #This method will get the data for the seventh graph which deals with warrant officer
+    #ranks
+    def get_data_seventh_graph(self, yearOne, yearTwo):
+        warrant_officer_death_data = []
+        columns = ['Rank', 'Deaths']
+        warrant_officer_death_data.append(columns)
+        ranks = [ 'WO', 'WO-1', 'WO1', 'CW2', 'CW3', 'CWO2', 'CWO3', 'CWO-4', 'CW4', 'CWO4']
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for rank in ranks:
+            rows = []
+            deaths = int(len(death_data_set[(death_data_set.RANK == rank)]))
+            rows.append(rank)
+            rows.append(deaths)
+            warrant_officer_death_data.append(rows)
+        return warrant_officer_death_data
+
+# one = Data()
+# one.get_data_sixth_graph(1960, 1965)
