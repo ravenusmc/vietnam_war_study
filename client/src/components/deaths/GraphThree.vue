@@ -1,12 +1,14 @@
 <template>
   <div>
 
-    <div>
-      <GChart
-        type="PieChart"
-        :data="chartDataThree"
-        :options="chartOptions"
-      />
+    <div class='cardDiv'>
+      <v-card>
+        <GChart
+          type="PieChart"
+          :data="chartDataThree"
+          :options="chartOptions"
+        />
+      </v-card>
     </div>
 
   </div>
@@ -53,4 +55,7 @@ export default {
 </script>
 
 <style scoped>
+.cardDiv {
+  margin: 10px;
+}
 </style>

@@ -1,12 +1,14 @@
 <template>
   <div>
 
-    <div>
-      <GChart
-        type="BarChart"
-        :data="chartDataTwo"
-        :options="chartOptions"
-      />
+    <div class='cardDiv'>
+      <v-card>
+        <GChart
+          type="BarChart"
+          :data="chartDataTwo"
+          :options="chartOptions"
+        />
+      </v-card>
     </div>
 
   </div>
@@ -55,4 +57,7 @@
 </script>
 
 <style scoped>
+.cardDiv {
+  margin: 10px;
+}
 </style>

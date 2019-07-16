@@ -1,12 +1,14 @@
 <template>
   <div>
 
-    <div>
-      <GChart
-        :type="typeOne"
-        :data="data"
-        :options="options"
-      />
+    <div class='cardDiv'>
+      <v-card>
+        <GChart
+          :type="typeOne"
+          :data="data"
+          :options="options"
+        />
+      </v-card>
     </div>
 
   </div>
@@ -22,4 +24,8 @@ export default {
 </script>
 
 <style scoped>
+.cardDiv {
+  margin: 10px;
+}
+
 </style>

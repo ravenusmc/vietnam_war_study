@@ -77,7 +77,6 @@ import GraphOne from '@/components/deaths/GraphOne.vue';
 import GraphTwo from '@/components/deaths/GraphTwo.vue';
 import GraphThree from '@/components/deaths/GraphThree.vue';
 import GraphFour from '@/components/deaths/GraphFour.vue';
-import GraphFive from '@/components/deaths/GraphFive.vue';
 import GraphCard from '@/components/deaths/GraphCard.vue';
 
 import { eventBus } from '../main';
@@ -93,7 +92,6 @@ export default {
     GraphTwo,
     GraphThree,
     GraphFour,
-    GraphFive,
     GraphCard,
   },
   data() {

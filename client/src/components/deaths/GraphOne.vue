@@ -1,12 +1,14 @@
 <template>
   <div>
 
-    <div>
-      <GChart
-        type="LineChart"
-        :data="chartData"
-        :options="chartOptions"
-      />
+    <div class='cardDiv'>
+      <v-card>
+        <GChart
+          type="LineChart"
+          :data="chartData"
+          :options="chartOptions"
+        />
+      </v-card>
     </div>
 
   </div>
@@ -53,4 +55,7 @@ export default {
 </script>
 
 <style scoped>
+.cardDiv {
+  margin: 10px;
+}
 </style>
