@@ -221,14 +221,43 @@ class Data():
         warrant_officer_death_data = []
         columns = ['Rank', 'Deaths']
         warrant_officer_death_data.append(columns)
-        ranks = [ 'WO', 'WO-1', 'WO1', 'CW2', 'CW3', 'CWO2', 'CWO3', 'CWO-4', 'CW4', 'CWO4']
+        ranks = ['WO-1', 'WO1', 'CW2', 'CWO2', 'CW3', 'CWO3', 'CWO-4', 'CW4', 'CWO4']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        WO1_deaths = 0
+        W02_deaths = 0
+        WO3_deaths = 0
+        W04_deaths = 0
         for rank in ranks:
             rows = []
             deaths = int(len(death_data_set[(death_data_set.RANK == rank)]))
-            rows.append(rank)
-            rows.append(deaths)
-            warrant_officer_death_data.append(rows)
+            if rank == 'WO-1' or rank == 'WO1':
+                WO1_deaths = deaths + WO1_deaths
+                if rank == 'WO1':
+                    rows.append('WO-1')
+                    rows.append(WO1_deaths)
+                    warrant_officer_death_data.append(rows)
+            elif rank == 'CW2' or rank == 'CWO2':
+                W02_deaths = deaths + W02_deaths
+                if rank == 'CWO2':
+                    rows.append('CWO-2')
+                    rows.append(W02_deaths)
+                    warrant_officer_death_data.append(rows)
+            elif rank == 'CW3' or rank == 'CWO3':
+                WO3_deaths = deaths + WO3_deaths
+                if rank == 'CWO3':
+                    rows.append('CWO-3')
+                    rows.append(WO3_deaths)
+                    warrant_officer_death_data.append(rows)
+            elif rank == 'CWO-4' or rank == 'CW4' or rank == 'CWO4':
+                W04_deaths = deaths + W04_deaths
+                if rank == 'CWO4':
+                    rows.append('CWO-4')
+                    rows.append(W04_deaths)
+                    warrant_officer_death_data.append(rows)
+            else:
+                rows.append(rank)
+                rows.append(deaths)
+                warrant_officer_death_data.append(rows)
         return warrant_officer_death_data
 
 # one = Data()
