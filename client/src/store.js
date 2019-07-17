@@ -44,7 +44,7 @@ export default new Vuex.Store({
       dispatch('fetchGraphFiveData', { payload })
       dispatch('fetchGraphSixData', { payload })
       dispatch('fetchGraphSevenData', { payload })
-      dispathc('fetchGraphEightData', { payload })
+      dispatch('fetchGraphEightData', { payload })
     },
 
     fireActionsTwo: ({ dispatch }, payload) => {
