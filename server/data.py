@@ -268,7 +268,6 @@ class Data():
         MOS_death_data.append(columns)
         jobs = ['INFANTRYMAN', 'RIFLEMAN', 'FIELD ARTILLERY BASIC', 'MACHINEGUNNER'
          'ASSAULTMAN', 'ARMOR CREWMAN', 'MORTARMAN', 'RADIOMAN', 'COMBAT PHOTOGRAPHER/MOTION MEDIA',
-         'LAV ASSAULTMAN', 'BASIC TANK AND ASSAULT AMPHIBIOUS VEHICLE CREWMAN',
          'SPECIAL FORCES']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
         for job in jobs:

@@ -64,6 +64,14 @@
         </GraphCard>
       </div>
 
+      <div>
+        <GraphCard
+          :typeOne='typeOne'
+          :data='graphEightData'
+          :options='chartOptionsEight'>
+        </GraphCard>
+      </div>
+
     </section>
 
   </div>
@@ -124,6 +132,14 @@ export default {
           min:0
         }}
       },
+      chartOptionsEight: {
+        title: 'Vietnam War Deaths By MOS',
+        legend: { position: 'bottom' },
+        'height':300,
+        vAxis: { viewWindow: {
+          min:0
+        }}
+      },
     }
   },
   computed: {
@@ -133,6 +149,7 @@ export default {
         'graphFiveData',
         'graphSixData',
         'graphSevenData',
+        'graphEightData'
     ]),
     getDeaths(){
       this.deaths = this.deathData
