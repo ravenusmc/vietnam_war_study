@@ -99,5 +99,16 @@ def graphSeven():
         warrant_officer_death_data = data.get_data_seventh_graph(yearOne, yearTwo)
         return jsonify(warrant_officer_death_data)
 
+#This route will get the data for the eigth graph
+@app.route('/eighthGraph', methods=['GET', 'POST'])
+def graphEight():
+    if request.method == 'POST':
+        data = Data()
+        post_data = request.get_json()
+        yearOne = int(post_data['yearOne'])
+        yearTwo = int(post_data['yearTwo'])
+        MOS_death_data = data.get_data_eight_graph(yearOne, yearTwo)
+        return jsonify(MOS_death_data)
+
 if __name__ == '__main__':
     app.run()

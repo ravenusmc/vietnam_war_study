@@ -14,7 +14,7 @@ class Data():
     def basic_info(self):
         print(self.data.head())
         #This will get me all unique values in a column
-        print(self.data.RANK.unique())
+        print(self.data.POSITION.unique())
 
     #This method will get the total number of deaths between the two years that that
     #user enters.
@@ -260,5 +260,27 @@ class Data():
                 warrant_officer_death_data.append(rows)
         return warrant_officer_death_data
 
+    #This method will get the data for the eigth chart which will focus on deaths
+    #by MOS
+    def get_data_eight_graph(self, yearOne, yearTwo):
+        MOS_death_data = []
+        columns = ['MOS', 'Deaths']
+        MOS_death_data.append(columns)
+        jobs = ['INFANTRYMAN', 'RIFLEMAN', 'FIELD ARTILLERY BASIC', 'MACHINEGUNNER'
+         'ASSAULTMAN', 'ARMOR CREWMAN', 'MORTARMAN', 'RADIOMAN', 'COMBAT PHOTOGRAPHER/MOTION MEDIA',
+         'LAV ASSAULTMAN', 'BASIC TANK AND ASSAULT AMPHIBIOUS VEHICLE CREWMAN',
+         'SPECIAL FORCES']
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for job in jobs:
+            rows = []
+            deaths = int(len(death_data_set[(death_data_set.POSITION == job)]))
+            rows.append(job)
+            rows.append(deaths)
+            MOS_death_data.append(rows)
+        return MOS_death_data
+
+
+
 # one = Data()
-# one.get_data_sixth_graph(1960, 1965)
+# one.basic_info()
+# one.get_data_eight_graph(1960, 1965)
