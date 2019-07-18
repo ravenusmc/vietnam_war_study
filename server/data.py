@@ -14,7 +14,7 @@ class Data():
     def basic_info(self):
         print(self.data.head())
         #This will get me all unique values in a column
-        print(self.data.POSITION.unique())
+        print(self.data.MARITAL_STATUS.unique())
 
     #This method will get the total number of deaths between the two years that that
     #user enters.
@@ -278,8 +278,24 @@ class Data():
             MOS_death_data.append(rows)
         return MOS_death_data
 
+    #This method will get the data that builds the ninth chart focusing on marital
+    #status.
+    def get_data_nine_graph(self, yearOne, yearTwo):
+        marital_death_data = []
+        columns = ['Status', 'Deaths']
+        marital_death_data.append(columns)
+        statuses = ['NEVER MARRIED', 'MARRIED']
+        death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
+        for status in statuses:
+            rows = []
+            deaths = int(len(death_data_set[(death_data_set.MARITAL_STATUS == status)]))
+            rows.append(status)
+            rows.append(deaths)
+            marital_death_data.append(rows)
+        return marital_death_data
 
 
-# one = Data()
-# one.basic_info()
-# one.get_data_eight_graph(1960, 1965)
+
+#one = Data()
+#one.basic_info()
+#one.get_data_nine_graph(1960, 1965)

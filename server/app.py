@@ -110,5 +110,16 @@ def graphEight():
         MOS_death_data = data.get_data_eight_graph(yearOne, yearTwo)
         return jsonify(MOS_death_data)
 
+#This route will get the data for the ninth graph
+@app.route('/ninthGraph', methods=['GET', 'POST'])
+def graphNine():
+    if request.method == 'POST':
+        data = Data()
+        post_data = request.get_json()
+        yearOne = int(post_data['yearOne'])
+        yearTwo = int(post_data['yearTwo'])
+        marital_death_data = data.get_data_nine_graph(yearOne, yearTwo)
+        return jsonify(marital_death_data)
+
 if __name__ == '__main__':
     app.run()

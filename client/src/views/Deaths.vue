@@ -72,6 +72,14 @@
         </GraphCard>
       </div>
 
+      <div>
+        <GraphCard
+          :typeOne='typeTwo'
+          :data='graphNineData'
+          :options='chartOptionsNine'>
+        </GraphCard>
+      </div>
+
     </section>
 
   </div>
@@ -108,6 +116,7 @@ export default {
       yearOne: 1960,
       yearTwo: 1975,
       typeOne: "BarChart",
+      typeTwo: "PieChart",
       chartOptionsFive: {
         title: 'Vietnam War Deaths By Enlisted Rank',
         legend: { position: 'bottom' },
@@ -140,6 +149,14 @@ export default {
           min:0
         }}
       },
+      chartOptionsNine: {
+        title: 'Vietnam War Deaths By Marital Status',
+        legend: { position: 'bottom' },
+        'height':300,
+        vAxis: { viewWindow: {
+          min:0
+        }}
+      },
     }
   },
   computed: {
@@ -149,7 +166,8 @@ export default {
         'graphFiveData',
         'graphSixData',
         'graphSevenData',
-        'graphEightData'
+        'graphEightData',
+        'graphNineData',
     ]),
     getDeaths(){
       this.deaths = this.deathData
