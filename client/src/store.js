@@ -17,6 +17,7 @@ export default new Vuex.Store({
      graphSixData: {},
      graphSevenData: {},
      graphEightData: {},
+     graphNineData: {},
   },
 
   getters: {
@@ -29,6 +30,7 @@ export default new Vuex.Store({
     graphSixData: state => state.graphSixData,
     graphSevenData: state => state.graphSevenData,
     graphEightData: state => state.graphEightData,
+    graphNineData: state => state.graphNineData,
   },
 
   actions: {
@@ -45,6 +47,7 @@ export default new Vuex.Store({
       dispatch('fetchGraphSixData', { payload })
       dispatch('fetchGraphSevenData', { payload })
       dispatch('fetchGraphEightData', { payload })
+      dispatch('fetchGraphNineData', { payload })
     },
 
     fireActionsTwo: ({ dispatch }, payload) => {
@@ -52,6 +55,7 @@ export default new Vuex.Store({
       dispatch('fetchGraphSixData', payload)
       dispatch('fetchGraphSevenData', payload)
       dispatch('fetchGraphEightData', payload)
+      dispatch('fetchGraphNineData', payload)
     },
 
     //This action will get the data for the number of deaths between two years
@@ -137,6 +141,15 @@ export default new Vuex.Store({
       })
     },
 
+    //This action will get the data for the ninth chart
+    fetchGraphNineData: ({ commit }, {payload}) => {
+      const path = 'http://localhost:5000/ninthGraph';
+      axios.post(path, payload)
+      .then((res) => {
+        commit('setGraphNineData', res.data)
+      })
+    },
+
   },
 
   mutations: {
@@ -167,6 +180,9 @@ export default new Vuex.Store({
     setGraphEightData(state, data) {
       state.graphEightData = data
     },
+    setGraphNineData(state, data){
+      state.graphNineData = data
+    }
   },
 
 });
