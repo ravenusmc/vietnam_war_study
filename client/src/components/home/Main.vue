@@ -32,6 +32,20 @@
 
       <div>
         <h2>Sections</h2>
+
+        <div id='sectionArea'>
+
+          <div>
+          </div>
+
+          <div>
+          </div>
+
+          <div>
+          </div>
+
+        </div>
+
       </div>
 
       <div class='gif_div'>
