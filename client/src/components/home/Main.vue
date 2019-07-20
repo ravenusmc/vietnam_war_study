@@ -80,5 +80,11 @@ export default {
   width: 80%;
 }
 
+#sectionArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid red;
+}
+
 
 </style>
