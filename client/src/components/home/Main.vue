@@ -36,12 +36,15 @@
         <div id='sectionArea'>
 
           <div>
+            <h1>Home</h1>
           </div>
 
           <div>
+            <h1>Graphs</h1>
           </div>
 
           <div>
+            <h1>About</h1>
           </div>
 
         </div>
