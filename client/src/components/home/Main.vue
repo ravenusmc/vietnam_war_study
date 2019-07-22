@@ -37,8 +37,8 @@
 
           <v-card>
             <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-              aspect-ratio="2.75"></v-img>
+              src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              aspect-ratio="1.0"></v-img>
 
             <v-card-title primary-title>
               <div>
@@ -53,8 +53,8 @@
 
           <v-card>
             <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-              aspect-ratio="2.75"></v-img>
+              src="https://images.unsplash.com/photo-1531737212413-667205e1cda7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              aspect-ratio="1.0"></v-img>
 
             <v-card-title primary-title>
               <div>

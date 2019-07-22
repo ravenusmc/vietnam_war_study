@@ -2,6 +2,7 @@
   <div>
 
     <router-view/>
+
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/deaths">Examining Deaths</router-link> |
@@ -142,7 +143,7 @@ export default {
         }}
       },
       chartOptionsEight: {
-        title: 'Vietnam War Deaths By MOS',
+        title: 'Vietnam War Deaths By Combat MOS',
         legend: { position: 'bottom' },
         'height':300,
         vAxis: { viewWindow: {

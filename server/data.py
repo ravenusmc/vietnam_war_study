@@ -266,9 +266,8 @@ class Data():
         MOS_death_data = []
         columns = ['MOS', 'Deaths']
         MOS_death_data.append(columns)
-        jobs = ['INFANTRYMAN', 'RIFLEMAN', 'FIELD ARTILLERY BASIC', 'MACHINEGUNNER'
-         'ASSAULTMAN', 'ARMOR CREWMAN', 'MORTARMAN', 'RADIOMAN', 'COMBAT PHOTOGRAPHER/MOTION MEDIA',
-         'SPECIAL FORCES']
+        jobs = ['INFANTRYMAN', 'RIFLEMAN', 'FIELD ARTILLERY BASIC', 'ASSAULTMAN',
+        'ARMOR CREWMAN', 'MORTARMAN']
         death_data_set = self.data[(self.data.FATALITY_YEAR >= yearOne) & (self.data.FATALITY_YEAR <= yearTwo)]
         for job in jobs:
             rows = []

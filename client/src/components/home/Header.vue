@@ -5,7 +5,6 @@
       <div>
         <h1 class='title_header'>Vietnam</h1>
       </div>
-      <!-- <img src='@/assets/img/rice_fields.jpg'> -->
     </header>
 
   </div>
@@ -44,6 +43,14 @@ img {
   font-weight: 600;
   letter-spacing: -.3rem;
   color: #fff;
+}
+
+@media only all and (max-width: 950px){
+
+  .title_header {
+    font-size: 8rem;
+  }
+
 }
 
 </style>
