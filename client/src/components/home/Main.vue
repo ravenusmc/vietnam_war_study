@@ -35,17 +35,37 @@
 
         <div id='sectionArea'>
 
-          <div>
-            <h1>Home</h1>
-          </div>
+          <v-card>
+            <v-img
+              src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+              aspect-ratio="2.75"></v-img>
 
-          <div>
-            <h1>Graphs</h1>
-          </div>
+            <v-card-title primary-title>
+              <div>
+                <h3 class="headline mb-0">Graphs</h3>
+              </div>
+            </v-card-title>
 
-          <div>
-            <h1>About</h1>
-          </div>
+            <v-card-actions>
+              <v-btn flat color="orange"><router-link to="/deaths">Explore</router-link></v-btn>
+            </v-card-actions>
+          </v-card>
+
+          <v-card>
+            <v-img
+              src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+              aspect-ratio="2.75"></v-img>
+
+            <v-card-title primary-title>
+              <div>
+                <h3 class="headline mb-0">About</h3>
+              </div>
+            </v-card-title>
+
+            <v-card-actions>
+              <v-btn flat color="orange"><router-link to="/about">About Me</router-link></v-btn>
+            </v-card-actions>
+          </v-card>
 
         </div>
 
@@ -85,8 +105,18 @@ export default {
 
 #sectionArea {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border: 2px solid red;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+@media only all and (max-width: 950px){
+
+  #sectionArea {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 
