@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <v-card>
+    <v-card class='contentFix' height='300px' width='575px'>
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">Vietnam War Deaths</h3>
@@ -40,5 +40,12 @@ export default {
   border: 2px solid black;
   margin: 10px;
   border-radius: 12px;
+}
+
+.contentFix {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

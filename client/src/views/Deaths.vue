@@ -9,7 +9,9 @@
       <router-link to="/about">About</router-link>
     </div>
 
-    <Form/>
+    <div class='pageTitle'>
+      <h2>Initial Graph and Thoughts</h2>
+    </div>
 
     <section id='infoArea'>
 
@@ -20,6 +22,12 @@
       <div>
         <Talk/>
       </div>
+
+    </section>
+
+    <Form/>
+
+    <section id='infoArea'>
 
       <div id='cardArea'>
         <Card
@@ -199,10 +207,15 @@ export default {
 
 <style scoped>
 
+.pageTitle {
+  text-decoration: underline;
+  margin-top: 50px;
+}
+
 #infoArea {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 5%;
   margin-right: 5%;
 }

@@ -1,7 +1,6 @@
 <template>
-  <div>
 
-    <v-card>
+    <v-card height='300px'>
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">Thoughts on War Deaths</h3>
@@ -16,7 +15,6 @@
       </v-card-title>
     </v-card>
 
-  </div>
 </template>
 
 <script>
