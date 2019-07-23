@@ -26,7 +26,7 @@ export default {
       drawer: false,
       links: [
         {icon: 'dashboard', text: 'Home', route: '/'},
-        {icon: 'person', text: 'Deaths', route: '/deaths'},
+        {icon: 'person', text: 'Graphs', route: '/deaths'},
         {icon: 'folder', text: 'About Me', route: '/about'},
       ]
     }
