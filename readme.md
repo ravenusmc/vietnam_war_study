@@ -7,11 +7,6 @@ encompass and I have to admit that's still a work in progress. The main goal wil
 be to allow the user to select two different years and see data about deaths during
 that time frame. The dataset for this project may be found at this site: https://www.kaggle.com/orangutan/vietnamconfilct.
 
-This project may also focus on bombing runs in Vietnam. I really would like to do
-something with this data because I'm almost positive that more bombs were dropped
-on Vietnam than on Japan and Germany during WW2. However, this is a possible plan
-for further down the line.
-
 # Getting started
 ### Installing
 
