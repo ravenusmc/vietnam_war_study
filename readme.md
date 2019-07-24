@@ -35,10 +35,9 @@ as well as npm.
 # Issues / Other
 
 This is not an issue but the way I went about programming this project. The first
-four graph are made in such a way that you really should not do - that is each
+four graphs are made in such a way that you really should not do - that is each
 graph has it's own component. The rest of the graphs are one component with the
-data passed to that component through props. This was more a learning experience
-for me.
+data passed to that component through props.
 
 # Preview
 

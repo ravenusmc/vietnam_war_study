@@ -55,7 +55,4 @@ export default {
 </script>
 
 <style scoped>
-.cardDiv {
-  margin: 10px;
-}
 </style>

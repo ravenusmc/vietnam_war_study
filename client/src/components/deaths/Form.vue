@@ -20,9 +20,6 @@
          <v-btn type="submit" color='yellow red--text'>
            Submit
          </v-btn>
-         <!-- <div class='button_div'>
-           <button class="btn btn-primary font" type="submit">Submit</button>
-         </div> -->
       </form>
 
     </section>
@@ -37,8 +34,8 @@ export default {
   name: 'name',
   data() {
     return {
-      yearOne: 0,
-      yearTwo: 0,
+      yearOne: 1960,
+      yearTwo: 1975,
     };
   },
   methods: {
@@ -80,16 +77,6 @@ form {
   border-radius: 10px;
 }
 
-.button_div {
-  margin-top: 10px;
-}
-
-button {
-  background-color: #F90303;
-  border-color: #F90303;
-  padding: 12px;
-  border-radius: 12px;
-}
 
 button:hover {
   color: #F90303;
