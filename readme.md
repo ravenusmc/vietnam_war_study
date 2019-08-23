@@ -41,4 +41,4 @@ data passed to that component through props.
 
 # Preview
 
-To see a video that talks about this project please go here: COMING SOON
+To see a video that talks about this project please go here: https://www.youtube.com/watch?v=3TcBgTB3Xm4
